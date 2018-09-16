@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
+   <children>
+      <StackPane prefHeight="400.0" prefWidth="282.0" style="-fx-background-color: #2887C9;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/LOGO_MARKET_BRANCO.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <VBox layoutX="282.0" prefHeight="400.0" prefWidth="318.0">
+         <children>
+            <HBox prefHeight="22.0" prefWidth="298.0">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView id="btnConfig" fx:id="btnConfig" fitHeight="25.0" fitWidth="24.0" onMouseClicked="#btnConfigAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons/config.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView id="btnClose" fx:id="btnClose" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../img/icons/close.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="249.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <ImageView fitHeight="64.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/LOGO_MARKET_AZUL_LADO.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="40.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label text="Sign in" textFill="#091f2e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <JFXTextField id="textFieldLogin" fx:id="txtLogin" focusColor="#0f7dba" promptText="Login">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField id="textFieldPassw" fx:id="txtPassword" onAction="#login" focusColor="#0f7dba" promptText="Password">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton id="btnLogin" fx:id="btnLogin" onAction="#login" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #2887C9;" text="Log in" textFill="#e7e6e8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="50.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

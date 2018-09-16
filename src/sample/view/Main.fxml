@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainStockController">
+   <left>
+      <AnchorPane prefHeight="510.0" prefWidth="215.0" style="-fx-background-color: #091F2E;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="324.0" prefWidth="216.0" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="38.0" prefWidth="216.0" style="-fx-background-color: #2887C9;">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/LOGO_MARKET_BRANCO_LADO.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="32.5" right="32.5" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnProducts" alignment="BASELINE_LEFT" graphicTextGap="25.0" prefHeight="35.0" prefWidth="215.0" text="Sales" textFill="#e7e6e8">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons/sales.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="btnStock" alignment="BASELINE_LEFT" graphicTextGap="25.0" prefHeight="35.0" prefWidth="215.0" text="Stock" textFill="#e7e6e8">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons/stock.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="btnReport" alignment="BASELINE_LEFT" graphicTextGap="25.0" prefHeight="35.0" prefWidth="215.0" text="Report" textFill="#e7e6e8">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons/report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnUser" alignment="BASELINE_LEFT" graphicTextGap="25.0" prefHeight="35.0" prefWidth="215.0" text="Users" textFill="#e7e6e8">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons/users.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnConfig" alignment="BASELINE_LEFT" graphicTextGap="25.0" prefHeight="35.0" prefWidth="215.0" text="Config" textFill="#e7e6e8">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons/configMedium.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutY="392.0" prefHeight="100.0" prefWidth="215.0" AnchorPane.bottomAnchor="0.0">
+               <children>
+                  <Label text="Session:" textFill="#e7e6e8">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="txtUser" prefHeight="17.0" prefWidth="190.0" text="User: Elias" textFill="#e7e6e8" />
+                  <Label fx:id="txtDB" prefHeight="17.0" prefWidth="190.0" text="DB:  market" textFill="#e7e6e8" />
+                  <Label fx:id="txtRole" prefHeight="17.0" prefWidth="190.0" text="Role: Estoquista" textFill="#e7e6e8" />
+                  <Label prefHeight="17.0" prefWidth="190.0" textFill="#e7e6e8" />
+               </children>
+               <padding>
+                  <Insets left="25.0" right="50.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="content" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

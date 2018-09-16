@@ -12,9 +12,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import sample.model.bean.Config;
 
-public class ConnectionMarket {
+public class ConnectionHover {
     
     
     
@@ -27,10 +26,10 @@ public class ConnectionMarket {
     public static Connection getConnection() {
         try {
             
-            Config.start();
-            user = Config.getUser();
-            password = Config.getPassword();
-            url = "jdbc:mysql://"+Config.getServer()+":"+Config.getPort()+"/market";
+            //Config.start();
+            //user = Config.getUser();
+            //password = Config.getPassword();
+            //url = "jdbc:mysql://"+Config.getServer()+":"+Config.getPort()+"/market";
             Class.forName(DRIVER);
             
             return DriverManager.getConnection(url, user, password);
@@ -50,7 +49,7 @@ public class ConnectionMarket {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(ConnectionMarket.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnectionHover.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
@@ -67,7 +66,7 @@ public class ConnectionMarket {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(ConnectionMarket.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnectionHover.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
@@ -84,7 +83,7 @@ public class ConnectionMarket {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(ConnectionMarket.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnectionHover.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
