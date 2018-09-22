@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
    <children>
       <StackPane prefHeight="400.0" prefWidth="282.0" style="-fx-background-color: #2887C9;">
          <children>
@@ -61,7 +61,7 @@
                   <Insets left="50.0" right="50.0" top="40.0" />
                </VBox.margin>
             </ImageView>
-            <Label text="Sign in" textFill="#091f2e">
+            <Label text="Sign up" textFill="#091f2e">
                <font>
                   <Font size="16.0" />
                </font>
@@ -77,7 +77,7 @@
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXPasswordField id="textFieldPassw" fx:id="txtPassword" onAction="#login" focusColor="#0f7dba" promptText="Password">
+            <JFXPasswordField id="textFieldPassw" fx:id="txtPassword" focusColor="#0f7dba" onAction="#login" promptText="Password">
                <VBox.margin>
                   <Insets left="50.0" right="50.0" top="20.0" />
                </VBox.margin>

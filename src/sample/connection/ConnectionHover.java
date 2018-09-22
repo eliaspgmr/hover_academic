@@ -30,6 +30,7 @@ public class ConnectionHover {
             //user = Config.getUser();
             //password = Config.getPassword();
             //url = "jdbc:mysql://"+Config.getServer()+":"+Config.getPort()+"/market";
+            url = "jdbc:mysql://localhost:3306/hover_academic";
             Class.forName(DRIVER);
             
             return DriverManager.getConnection(url, user, password);
