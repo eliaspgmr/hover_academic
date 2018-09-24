@@ -4,6 +4,7 @@
  */
 package sample.model;
 
+import sample.model.bean.Config;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -15,6 +16,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class RWConfig {
+
+    private static final File arquivo = new File("config.ini");
+    private static final String[] data = new String[4];
+    private static boolean createValue;
+    private static boolean readValue;
+    private static boolean writeValue;
+    private static Config config;
+
+
     public static void createFile(){
         if(!arquivo.exists()){
             try {
@@ -42,7 +52,7 @@ public class RWConfig {
         }
     }
     
-    public static String[] read(){
+    public static Config read(){
         try {
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
@@ -52,6 +62,7 @@ public class RWConfig {
                     data[i] = Criptography.dec(br.readLine());
                     i++;
                 }
+                config = new Config(data[0], data[1], data[2], data[3]);
             } catch (IOException ex) {
                 Logger.getLogger(RWConfig.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -70,18 +81,24 @@ public class RWConfig {
             Logger.getLogger(RWConfig.class.getName()).log(Level.SEVERE, null, ex);
             readValue = false;
         }
-        return data;
+        return config;
     }
     
-    public static void write(String[] inf){
+    public static void write(Config inf){
         try {
             FileWriter fw = new FileWriter(arquivo);
             BufferedWriter bw = new BufferedWriter(fw);
             
-            for(int j=0;j<4;j++){
-                bw.write(Criptography.enc(inf[j]));
-                bw.newLine();
-            }
+
+            bw.write(Criptography.enc(inf.getUser()));
+            bw.newLine();
+            bw.write(Criptography.enc(inf.getPassword()));
+            bw.newLine();
+            bw.write(Criptography.enc(inf.getServer()));
+            bw.newLine();
+            bw.write(Criptography.enc(inf.getPort()));
+            bw.newLine();
+
             bw.close();
             fw.close();
             writeValue = true;
@@ -103,10 +120,6 @@ public class RWConfig {
         return writeValue;
     }
     
-    private static final File arquivo = new File("config.ini");
-    private static final String[] data = new String[4];
-    private static boolean createValue;
-    private static boolean readValue;
-    private static boolean writeValue;
+
     
 }

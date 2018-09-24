@@ -5,6 +5,8 @@
  */
 package sample.connection;
 
+import sample.model.bean.ServerSession;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -17,20 +19,19 @@ public class ConnectionHover {
     
     
     
-    private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static String url = "jdbc:mysql://localhost:3306/market";
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static String url;
     private static String user;
     private static String password;
     
     //Connection
     public static Connection getConnection() {
         try {
-            
-            //Config.start();
-            //user = Config.getUser();
-            //password = Config.getPassword();
-            //url = "jdbc:mysql://"+Config.getServer()+":"+Config.getPort()+"/market";
-            url = "jdbc:mysql://localhost:3306/hover_academic";
+
+            user = ServerSession.getUser();
+            password = ServerSession.getPassword();
+            url = "jdbc:mysql://"+ServerSession.getServer()+":"+ServerSession.getPort()+"/hover_academic?useTimezone=true&serverTimezone=UTC";
+            //url = "jdbc:mysql://localhost:3306/hover_academic?useTimezone=true&serverTimezone=UTC";
             Class.forName(DRIVER);
             
             return DriverManager.getConnection(url, user, password);

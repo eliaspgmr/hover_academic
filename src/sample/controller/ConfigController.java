@@ -4,6 +4,8 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.Initializable;
 import sample.model.RWConfig;
+import sample.model.bean.Config;
+import sample.model.bean.ServerSession;
 import sample.view.ConfigApp;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,20 +26,21 @@ public class ConfigController implements Initializable{
     @FXML
     public void save() {
         
-        String[] dados = new String[4];
-        dados[0] = txtUser.getText();
-        dados[1] = txtPass.getText();
-        dados[2] = txtServer.getText();
-        dados[3] = txtPort.getText();
+        Config dados = new Config();
+        dados.setUser(txtUser.getText());
+        dados.setPassword(txtPass.getText());
+        dados.setServer(txtServer.getText());
+        dados.setPort(txtPort.getText());
 
         RWConfig.createFile();
         if(RWConfig.getCreateValue()) { 
             
             RWConfig.write(dados);
             if(RWConfig.getWriteValue()) {
-               ConfigApp.getStage().close();
+                ServerSession.update();
+                ConfigApp.getStage().close();
             }else {
-               System.out.println("Problema ao salvar dados");
+                System.out.println("Problema ao salvar dados");
             }
             
         }else {
@@ -48,11 +51,12 @@ public class ConfigController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        String[] dados = RWConfig.read();
-        txtUser.setText(dados[0]);
-        txtPass.setText(dados[1]);
-        txtServer.setText(dados[2]);
-        txtPort.setText(dados[3]);
+        RWConfig.createFile();
+        Config config = RWConfig.read();
+        txtUser.setText(config.getUser());
+        txtPass.setText(config.getPassword());
+        txtServer.setText(config.getServer());
+        txtPort.setText(config.getPort());
     }
 
 }

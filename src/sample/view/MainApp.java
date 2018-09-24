@@ -1,9 +1,9 @@
 package sample.view;
 
 /*
-* Market
+* Hover Academic
 * Main class
-* @author: Elias Ferreira
+* @author: Hover
 */
 
 //imports
@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.model.bean.ServerSession;
 
 public class MainApp extends Application {
     //Main Stage
@@ -22,9 +23,10 @@ public class MainApp extends Application {
         
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
         mainStage = primaryStage;
-        mainStage.setTitle("Market");
+        mainStage.setTitle("Hover-Academic");
         mainStage.setScene(new Scene(root));
-        
+
+        ServerSession.update();
         new LoginApp();
 
     }

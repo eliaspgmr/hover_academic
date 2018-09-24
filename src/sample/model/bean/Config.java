@@ -26,19 +26,34 @@ public class Config {
     }
 
     public String getUser() {
-        return this.user;
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getPassword() {
-        return this.password;
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getServer() {
-        return this.server;
+        return server;
+    }
+
+    public void setServer(String server) {
+        this.server = server;
     }
 
     public String getPort() {
-        return this.port;
+        return port;
     }
 
+    public void setPort(String port) {
+        this.port = port;
+    }
 }
