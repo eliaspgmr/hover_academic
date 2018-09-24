@@ -2,7 +2,7 @@ package sample.model.bean;
 
 public class Endereco {
     private int id;
-    private int id_aluno;
+    private int idAluno;
     private String rua;
     private int numero;
     private String bairro;
@@ -12,7 +12,7 @@ public class Endereco {
 
     public Endereco() {
         this.id = 0;
-        this.id_aluno = 0;
+        this.idAluno = 0;
         this.rua = null;
         this.numero = 0;
         this.bairro = null;
@@ -20,8 +20,9 @@ public class Endereco {
         this.estado = null;
         this.cep = 0;
     }
-    public Endereco(int id_aluno, String rua, int numero, String bairro, String cidade, String estado, int cep) {
-        this.id_aluno = id_aluno;
+    public Endereco(int idAluno, String rua, int numero, String bairro,
+                    String cidade, String estado, int cep) {
+        this.idAluno = idAluno;
         this.rua = rua;
         this.numero = numero;
         this.bairro = bairro;
@@ -30,9 +31,10 @@ public class Endereco {
         this.cep = cep;
     }
 
-    public Endereco(int id, int id_aluno, String rua, int numero, String bairro, String cidade, String estado, int cep) {
+    public Endereco(int id, int idAluno, String rua, int numero,
+                    String bairro, String cidade, String estado, int cep) {
         this.id = id;
-        this.id_aluno = id_aluno;
+        this.idAluno = idAluno;
         this.rua = rua;
         this.numero = numero;
         this.bairro = bairro;
@@ -49,12 +51,12 @@ public class Endereco {
         this.id = id;
     }
 
-    public int getId_aluno() {
-        return id_aluno;
+    public int getIdAluno() {
+        return idAluno;
     }
 
-    public void setId_aluno(int id_aluno) {
-        this.id_aluno = id_aluno;
+    public void setIdAluno(int id_aluno) {
+        this.idAluno = id_aluno;
     }
 
     public String getRua() {

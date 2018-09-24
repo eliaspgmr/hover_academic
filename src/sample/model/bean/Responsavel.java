@@ -8,29 +8,29 @@ public class Responsavel {
 
     private int id;
     private String nome;
-    private String data_nascimento;
+    private String dataNascimento;
     private int rg;
     private int cpf;
 
     public Responsavel() {
         this.id = 0;
         this.nome = null;
-        this.data_nascimento = null;
+        this.dataNascimento = null;
         this.rg = 0;
         this.cpf = 0;
     }
 
-    public Responsavel(String nome, String data_nascimento, int rg, int cpf) {
+    public Responsavel(String nome, String dataNascimento, int rg, int cpf) {
         this.nome = nome;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
         this.rg = rg;
         this.cpf = cpf;
     }
 
-    public Responsavel(int id, String nome, String data_nascimento, int rg, int cpf) {
+    public Responsavel(int id, String nome, String dataNascimento, int rg, int cpf) {
         this.id = id;
         this.nome = nome;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
         this.rg = rg;
         this.cpf = cpf;
     }
@@ -51,12 +51,12 @@ public class Responsavel {
         this.nome = nome;
     }
 
-    public String getData_nascimento() {
-        return data_nascimento;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setData_nascimento(String data_nascimento) {
-        this.data_nascimento = data_nascimento;
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public int getRg() {

@@ -3,10 +3,10 @@ package sample.model.bean;
 public class Aluno {
 
     private int id;
-    private int id_usuario;
-    private int id_responsavel;
+    private int idUsuario;
+    private int idResponsavel;
     private String nome;
-    private String data_nascimento;
+    private String dataNascimento;
     private int rg;
     private int cpf;
     private char sexo;
@@ -15,10 +15,10 @@ public class Aluno {
 
     public Aluno() {
         this.id =0;
-        this.id_usuario = 0;
-        this.id_responsavel = 0;
+        this.idUsuario = 0;
+        this.idResponsavel = 0;
         this.nome = null;
-        this.data_nascimento = null;
+        this.dataNascimento = null;
         this.rg = 0;
         this.cpf = 0;
         this.sexo = ' ';
@@ -26,20 +26,14 @@ public class Aluno {
         this.status = false;
     }
 
-    public Aluno(int id_usuario,
-                 int id_responsavel,
-                 String nome,
-                 String data_nascimento,
-                 int rg,
-                 int cpf,
-                 char sexo,
-                 String obs,
-                 boolean status) {
+    public Aluno(int idUsuario, int idResponsavel, String nome,
+                 String dataNascimento, int rg, int cpf,
+                 char sexo, String obs, boolean status) {
 
-        this.id_usuario = id_usuario;
-        this.id_responsavel = id_responsavel;
+        this.idUsuario = idUsuario;
+        this.idResponsavel = idResponsavel;
         this.nome = nome;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
         this.rg = rg;
         this.cpf = cpf;
         this.sexo = sexo;
@@ -47,22 +41,15 @@ public class Aluno {
         this.status = status;
     }
 
-    public Aluno(int id,
-                 int id_usuario,
-                 int id_responsavel,
-                 String nome,
-                 String data_nascimento,
-                 int rg,
-                 int cpf,
-                 char sexo,
-                 String obs,
-                 boolean status) {
+    public Aluno(int id, int idUsuario, int idResponsavel, String nome,
+                 String dataNascimento, int rg,int cpf,
+                 char sexo, String obs, boolean status) {
 
         this.id = id;
-        this.id_usuario = id_usuario;
-        this.id_responsavel = id_responsavel;
+        this.idUsuario = idUsuario;
+        this.idResponsavel = idResponsavel;
         this.nome = nome;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
         this.rg = rg;
         this.cpf = cpf;
         this.sexo = sexo;
@@ -78,20 +65,20 @@ public class Aluno {
         this.id = id;
     }
 
-    public int getId_usuario() {
-        return id_usuario;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setId_usuario(int id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setIdUsuario(int id_usuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public int getId_responsavel() {
-        return id_responsavel;
+    public int getIdResponsavel() {
+        return idResponsavel;
     }
 
-    public void setId_responsavel(int id_responsavel) {
-        this.id_responsavel = id_responsavel;
+    public void setIdResponsavel(int idResponsavel) {
+        this.idResponsavel = idResponsavel;
     }
 
     public String getNome() {
@@ -102,12 +89,12 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public String getData_nascimento() {
-        return data_nascimento;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setData_nascimento(String data_nascimento) {
-        this.data_nascimento = data_nascimento;
+    public void setDataNascimento(String data_nascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public int getRg() {

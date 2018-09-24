@@ -2,29 +2,29 @@ package sample.model.bean;
 
 public class Contato {
     private int id;
-    private int id_aluno;
+    private int idAluno;
     private int telefone;
     private int celular;
     private String email;
 
     public Contato() {
         this.id = 0;
-        this.id_aluno = 0;
+        this.idAluno = 0;
         this.telefone = 0;
         this.celular = 0;
         this.email = null;
     }
 
-    public Contato(int id_aluno, int telefone, int celular, String email) {
-        this.id_aluno = id_aluno;
+    public Contato(int idAluno, int telefone, int celular, String email) {
+        this.idAluno = idAluno;
         this.telefone = telefone;
         this.celular = celular;
         this.email = email;
     }
 
-    public Contato(int id, int id_aluno, int telefone, int celular, String email) {
+    public Contato(int id, int idAluno, int telefone, int celular, String email) {
         this.id = id;
-        this.id_aluno = id_aluno;
+        this.idAluno = idAluno;
         this.telefone = telefone;
         this.celular = celular;
         this.email = email;
@@ -38,12 +38,12 @@ public class Contato {
         this.id = id;
     }
 
-    public int getId_aluno() {
-        return id_aluno;
+    public int getIdAluno() {
+        return idAluno;
     }
 
-    public void setId_aluno(int id_aluno) {
-        this.id_aluno = id_aluno;
+    public void setIdAluno(int idAluno) {
+        this.idAluno = idAluno;
     }
 
     public int getTelefone() {
