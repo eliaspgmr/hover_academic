@@ -3,3 +3,7 @@
     -fx-prompt-text-fill: #9A999A;
 
 }
+.mainTopo {
+    -fx-border-color: #DEE4E7;
+    -fx-border-width: 0px 0px 1px 0px;
+}

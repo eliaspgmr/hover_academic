@@ -10,7 +10,7 @@ public class Parcelas {
     private String dataPagamento;
 
     public Parcelas() {
-        
+
         this.idFinanceiro =0;
         this.numero = 0;
         this.valor =0;

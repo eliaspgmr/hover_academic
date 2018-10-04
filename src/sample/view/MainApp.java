@@ -14,31 +14,28 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.model.bean.ServerSession;
 
-public class MainApp extends Application {
-    //Main Stage
-    public static Stage mainStage;
+import java.io.IOException;
 
-    @Override
-    public void start(Stage primaryStage) throws Exception{
+public class MainApp {
+    //Main Stage
+    private static Stage mainStage = new Stage();
+
+    public MainApp() throws IOException {
         
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-        mainStage = primaryStage;
         mainStage.setTitle("Hover-Academic");
         mainStage.setScene(new Scene(root));
-
-        ServerSession.update();
-        new LoginApp();
+        mainStage.show();
 
     }
-    
+
+
+
     //Method to get the main stage
     public static Stage getStage() {
         return mainStage;
     }
 
-    //Main method
-    public static void main(String[] args) {
-        launch(args);
-    }
+
     
 }

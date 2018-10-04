@@ -6,31 +6,40 @@
 package sample.view;
 
 import java.io.IOException;
+
+import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sample.model.bean.ServerSession;
 
 /**
  *
  * @author Elias Ferreira
  */
-public class LoginApp {
-    
-    public LoginApp() throws IOException {
-        
+public class LoginApp extends Application {
+    static Stage loginStage;
+    @Override
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        loginStage = primaryStage;
         loginStage.setScene(new Scene(root));
         loginStage.initStyle(StageStyle.UNDECORATED);
         loginStage.show();
-        
+
+        ServerSession.update();
     }
-    
-    static Stage loginStage = new Stage();
+
+
     
     public static Stage getLoginStage() {
         return loginStage;
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
     
 }

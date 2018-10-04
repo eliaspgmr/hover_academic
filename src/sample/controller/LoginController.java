@@ -3,6 +3,7 @@ package sample.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import sample.model.bean.Session;
 import sample.view.ConfigApp;
 import sample.view.MainApp;
 import java.io.IOException;
@@ -14,7 +15,6 @@ import sample.view.LoginApp;
 import sample.model.DAO.UserDAO;
 import sample.model.bean.Usuario;
 
-import javax.swing.*;
 
 
 public class LoginController {
@@ -38,30 +38,26 @@ public class LoginController {
     }
     
     @FXML
-    public void login(ActionEvent evt) {
+    public void login(ActionEvent evt) throws IOException {
 
-        //JOptionPane.showMessageDialog(null, txtPassword.getText());
-        this.loginAction();
-    }
-    
-    private void loginAction() {
-        
         UserDAO userDAO = new UserDAO();
         Usuario user = userDAO.select(txtLogin.getText());
-        
+
         if(user.getLogin() == null) {
             System.out.println("Usuário Inválido!");
         }else if(Criptography.enc(txtPassword.getText()).equals(user.getSenha())){
 
-            //Session session = new Session(user);
+            Session.start(user);
 
-            MainApp.getStage().show();
+            txtLogin.setText(null);
+            txtPassword.setText(null);
             LoginApp.getLoginStage().close();
-            
+            new MainApp();
+
         }else{
             System.out.println("Senha Inválida!");
         }
-        
+
     }
     
 }
