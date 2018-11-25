@@ -5,48 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/model/bean/Session.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/controller/MainCashierController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/controller/MainStockController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/LOGO_MARKET_AZUL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/LOGO_MARKET_AZUL_LADO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/LOGO_MARKET_BRANCO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/LOGO_MARKET_BRANCO_LADO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/icons/configMedium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/icons/products.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/icons/report.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/icons/sales.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/icons/stock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/img/icons/users.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Aluno.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Contato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Contato.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Endereco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Endereco.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Responsavel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Responsavel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/style/config.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/style/config.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/view/LoginApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/view/LoginApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/view/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/view/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/test/TestCripto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/ConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/ConfigController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/MainCashierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/MainStockController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/LOGO_MARKET_AZUL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/LOGO_MARKET_AZUL_LADO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/LOGO_MARKET_BRANCO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/LOGO_MARKET_BRANCO_LADO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/icons/configMedium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/icons/products.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/icons/report.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/icons/sales.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/icons/stock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/img/icons/users.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/bean/Parcelas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/bean/Parcelas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/style/config.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/style/config.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/LoginApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/LoginApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/Criptography.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/criptography/Criptography.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/RWConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/config/RWConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/bean/ServerSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/bean/ServerSession.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,71 +78,20 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1623633319">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="12" />
-          <entry key="project.open.time.111" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.53" value="1" />
-          <entry key="project.open.time.66" value="1" />
-          <entry key="project.open.time.73" value="1" />
-          <entry key="project.open.time.74" value="1" />
-          <entry key="project.open.time.75" value="1" />
-          <entry key="project.open.time.80" value="2" />
-          <entry key="project.open.time.97" value="1" />
-          <entry key="project.opened" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="fxml" value="12" />
-          <entry key="java" value="116" />
-          <entry key="sql" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="116" />
-          <entry key="SQL" value="9" />
-          <entry key="XML" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="1" />
-          <entry key="fxml" value="18" />
-          <entry key="java" value="7245" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="7245" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="18" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="255">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#484#485#0" expanded="true" />
                 <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,8 +100,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+            <state relative-caret-position="216">
+              <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#970#971#0" expanded="true" />
@@ -244,9 +159,9 @@
         <option value="$PROJECT_DIR$/src/sample/model/bean/Session.java" />
         <option value="$PROJECT_DIR$/src/sample/view/LoginApp.java" />
         <option value="$PROJECT_DIR$/src/sample/view/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/sample/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/sample/view/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/controller/LoginController.java" />
       </list>
     </option>
   </component>
@@ -258,7 +173,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
+    <option name="x" value="102" />
+    <option name="y" value="19" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -273,9 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -299,14 +212,15 @@
               <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
               <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
@@ -316,6 +230,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,9 +244,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538096216779" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543163914459" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.12.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -362,7 +278,7 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -469,7 +385,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -480,11 +396,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -537,10 +453,10 @@
     <option name="totallyTimeSpent" value="40233000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="0" width="1386" height="788" extended-state="0" />
+    <frame x="102" y="19" width="1386" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50152904" visible="true" weight="0.18853696" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.50152904" visible="true" weight="0.19457014" />
       <window_info id="Structure" order="1" sideWeight="0.49847096" weight="0.24962293" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -549,7 +465,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32874617" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32874617" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32824427" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -573,13 +489,11 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Maven" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -593,13 +507,6 @@
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/model/Criptography.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Config.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
@@ -609,16 +516,6 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/model/RWConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="61" column="62" lean-forward="true" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/ConfigApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -632,13 +529,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/TestCripto.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="169" column="20" lean-forward="true" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/connection/ConnectionHover.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -775,13 +665,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/MainStockController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/controller/MainStockController.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Session.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -852,22 +736,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        <state relative-caret-position="255">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="169" column="20" lean-forward="true" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/config/RWConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/criptography/Criptography.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        <state relative-caret-position="216">
+          <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#970#971#0" expanded="true" />

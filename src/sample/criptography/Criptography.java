@@ -3,7 +3,7 @@
  * Criptography Class
  * @author hover
  */
-package sample.model;
+package sample.criptography;
 //imports
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

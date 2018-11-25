@@ -10,7 +10,7 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
-import sample.model.Criptography;
+import sample.criptography.Criptography;
 import sample.view.LoginApp;
 import sample.model.DAO.UserDAO;
 import sample.model.bean.Usuario;

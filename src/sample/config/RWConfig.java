@@ -2,8 +2,9 @@
  * Lê e escreve no arquivo config
  * @author hover
  */
-package sample.model;
+package sample.config;
 
+import sample.criptography.Criptography;
 import sample.model.bean.Config;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

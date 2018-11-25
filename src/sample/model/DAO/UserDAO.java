@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import sample.connection.ConnectionHover;
 import sample.model.bean.Usuario;
-import sample.model.Criptography;
+import sample.criptography.Criptography;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;

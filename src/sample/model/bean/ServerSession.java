@@ -1,6 +1,6 @@
 package sample.model.bean;
 
-import sample.model.RWConfig;
+import sample.config.RWConfig;
 
 public class ServerSession {
     private static String user;

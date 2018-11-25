@@ -3,7 +3,7 @@ package sample.controller;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.Initializable;
-import sample.model.RWConfig;
+import sample.config.RWConfig;
 import sample.model.bean.Config;
 import sample.model.bean.ServerSession;
 import sample.view.ConfigApp;
