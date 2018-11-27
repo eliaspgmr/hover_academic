@@ -1,8 +1,8 @@
 package sample.model.DAO;
 /**
- * Market
+ * hover-academic
  * Class DAO of user
- * @author Elias Ferreira
+ * @author hover
  */
 
 import java.sql.Connection;
@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 public class UserDAO {
 
     //Create a new User on system
-    public void create(Usuario user) {
+    public void createUser(Usuario user) {
 
         Connection connection = ConnectionHover.getConnection();
         PreparedStatement statement = null;
@@ -62,12 +62,13 @@ public class UserDAO {
 
             while(result.next()) {
 
-                Usuario user = new Usuario(result.getInt("id_usuario"),
+                Usuario user = new Usuario(
+                        result.getInt("id_usuario"),
                         result.getString("nome"),
                         result.getString("login"),
                         result.getString("senha"),
-                        result.getString("cargo"));
-
+                        result.getString("cargo")
+                );
                 userList.add(user);
 
             }

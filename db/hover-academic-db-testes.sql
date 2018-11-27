@@ -7,7 +7,7 @@ desc usuarios;
 insert into usuarios
 (nome, login, senha, cargo)
 values
-('Carlos Henrique','carlos','arkanjo','Professor');
+('Elias Ferreira','root','D+JTNjUUtkyjN40BHSeFrw==','Professor');
 
 select * from usuarios;
 
@@ -23,18 +23,20 @@ values
 
 select * from responsavel;
 
-delete from responsavel where id_responsavel= 1;
+select * from responsavel where id_responsavel = 1;
+
+delete from responsavel where id_responsavel= 3;
 -- ---------------------------------------
 -- ---------- alunos -------------------
 desc alunos;
 insert into alunos
 (usuarios_id_usuario, responsavel_id_responsavel, nome, data_nascimento, rg, cpf, sexo, obs, status)
 values
-('4','3','marcelo','2005/05/27','20054589621','15975345602','m','','1');
+('1','2','marcelo','2005/05/27','20054589621','15975345602','m','','1');
 
 select * from alunos;
 
-delete from alunos where id_aluno = 1;
+delete from alunos where id_aluno = 5;
 
 drop table alunos;
 -- ---------------------------------------

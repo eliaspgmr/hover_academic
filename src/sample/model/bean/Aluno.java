@@ -7,9 +7,9 @@ public class Aluno {
     private int idResponsavel;
     private String nome;
     private String dataNascimento;
-    private int rg;
-    private int cpf;
-    private char sexo;
+    private String rg;
+    private String cpf;
+    private String sexo;
     private String obs;
     private boolean status;
 
@@ -19,16 +19,16 @@ public class Aluno {
         this.idResponsavel = 0;
         this.nome = null;
         this.dataNascimento = null;
-        this.rg = 0;
-        this.cpf = 0;
-        this.sexo = ' ';
+        this.rg = null;
+        this.cpf = null;
+        this.sexo = null;
         this.obs = null;
         this.status = false;
     }
 
     public Aluno(int idUsuario, int idResponsavel, String nome,
-                 String dataNascimento, int rg, int cpf,
-                 char sexo, String obs, boolean status) {
+                 String dataNascimento, String rg, String cpf,
+                 String sexo, String obs, boolean status) {
 
         this.idUsuario = idUsuario;
         this.idResponsavel = idResponsavel;
@@ -42,8 +42,8 @@ public class Aluno {
     }
 
     public Aluno(int id, int idUsuario, int idResponsavel, String nome,
-                 String dataNascimento, int rg,int cpf,
-                 char sexo, String obs, boolean status) {
+                 String dataNascimento, String rg, String cpf,
+                 String sexo, String obs, boolean status) {
 
         this.id = id;
         this.idUsuario = idUsuario;
@@ -97,27 +97,27 @@ public class Aluno {
         this.dataNascimento = dataNascimento;
     }
 
-    public int getRg() {
+    public String getRg() {
         return rg;
     }
 
-    public void setRg(int rg) {
+    public void setRg(String rg) {
         this.rg = rg;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
@@ -129,7 +129,7 @@ public class Aluno {
         this.obs = obs;
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 

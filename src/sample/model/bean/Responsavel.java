@@ -9,25 +9,25 @@ public class Responsavel {
     private int id;
     private String nome;
     private String dataNascimento;
-    private int rg;
-    private int cpf;
+    private String rg;
+    private String cpf;
 
     public Responsavel() {
         this.id = 0;
         this.nome = null;
         this.dataNascimento = null;
-        this.rg = 0;
-        this.cpf = 0;
+        this.rg = null;
+        this.cpf = null;
     }
 
-    public Responsavel(String nome, String dataNascimento, int rg, int cpf) {
+    public Responsavel(String nome, String dataNascimento, String rg, String cpf) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.rg = rg;
         this.cpf = cpf;
     }
 
-    public Responsavel(int id, String nome, String dataNascimento, int rg, int cpf) {
+    public Responsavel(int id, String nome, String dataNascimento, String rg, String cpf) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -59,19 +59,19 @@ public class Responsavel {
         this.dataNascimento = dataNascimento;
     }
 
-    public int getRg() {
+    public String  getRg() {
         return rg;
     }
 
-    public void setRg(int rg) {
+    public void setRg(String rg) {
         this.rg = rg;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 }

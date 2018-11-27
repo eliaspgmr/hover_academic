@@ -10,7 +10,7 @@ public class TestUserDAO {
         ServerSession.update();
 
         UserDAO dao = new UserDAO();
-        Usuario user = new Usuario();
+        Usuario user;
         user = dao.select("root");
 
         System.out.println(user.getNome());
