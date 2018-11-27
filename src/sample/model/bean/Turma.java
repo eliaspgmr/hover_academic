@@ -1,6 +1,6 @@
 package sample.model.bean;
 
-public class Turmas {
+public class Turma {
 
     private int id;
     private int idUsuario;
@@ -10,7 +10,7 @@ public class Turmas {
     private String horario;
     private String dataInicio;
 
-    public Turmas() {
+    public Turma() {
         this.id = 0;
         this.idUsuario = 0;
         this.idCurso = 0;
@@ -20,9 +20,9 @@ public class Turmas {
         this.dataInicio = null;
     }
 
-    public Turmas(int id, int idUsuario, int idCurso,
-                  String nome, String dia, String horario,
-                  String dataInicio) {
+    public Turma(int id, int idUsuario, int idCurso,
+                 String nome, String dia, String horario,
+                 String dataInicio) {
 
         this.id = id;
         this.idUsuario = idUsuario;
@@ -33,8 +33,8 @@ public class Turmas {
         this.dataInicio = dataInicio;
     }
 
-    public Turmas(int idUsuario, int idCurso, String nome,
-                  String dia, String horario, String dataInicio) {
+    public Turma(int idUsuario, int idCurso, String nome,
+                 String dia, String horario, String dataInicio) {
 
         this.id = id;
         this.idUsuario = idUsuario;

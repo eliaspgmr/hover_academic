@@ -1,13 +1,13 @@
 package sample.model.bean;
 
-public class Cursos {
+public class Curso {
     private int id;
     private String nome;
     private String nivel;
     private int duracao;
     private double valor;
 
-    public Cursos() {
+    public Curso() {
         this.id = 0;
         this.nome = null;
         this.nivel = null;
@@ -15,7 +15,7 @@ public class Cursos {
         this.valor = 0;
     }
 
-    public Cursos(int id, String nome, String nivel, int duracao, double valor) {
+    public Curso(int id, String nome, String nivel, int duracao, double valor) {
         this.id = id;
         this.nome = nome;
         this.nivel = nivel;
@@ -23,7 +23,7 @@ public class Cursos {
         this.valor = valor;
     }
 
-    public Cursos(String nome, String nivel, int duracao, double valor) {
+    public Curso(String nome, String nivel, int duracao, double valor) {
         this.nome = nome;
         this.nivel = nivel;
         this.duracao =duracao;

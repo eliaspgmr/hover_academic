@@ -1,6 +1,6 @@
 package sample.model.bean;
 
-public class Parcelas {
+public class Parcela {
 
     private int idFinanceiro;
     private int numero;
@@ -9,7 +9,7 @@ public class Parcelas {
     private double multa;
     private String dataPagamento;
 
-    public Parcelas() {
+    public Parcela() {
 
         this.idFinanceiro =0;
         this.numero = 0;
@@ -19,8 +19,8 @@ public class Parcelas {
         this.dataPagamento = null;
     }
 
-    public Parcelas(int idFinanceiro, int numero, double valor,
-                    double juros, double multa, String dataPagamento) {
+    public Parcela(int idFinanceiro, int numero, double valor,
+                   double juros, double multa, String dataPagamento) {
 
         this.idFinanceiro = idFinanceiro;
         this.numero = numero;
