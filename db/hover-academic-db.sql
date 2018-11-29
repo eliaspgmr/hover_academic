@@ -106,9 +106,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `hover_academic`.`curos`
+-- Table `hover_academic`.`cursos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hover_academic`.`curos` (
+CREATE TABLE IF NOT EXISTS `hover_academic`.`cursos` (
   `id_curso` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `nivel` VARCHAR(15) NOT NULL,
@@ -124,7 +124,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `hover_academic`.`turma` (
   `id_turma` INT NOT NULL AUTO_INCREMENT,
   `usuarios_id_usuario` INT NOT NULL,
-  `curos_id_curso` INT NOT NULL,
+  `cursos_id_curso` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL UNIQUE,
   `dia` VARCHAR(15) NOT NULL,
   `horario` TIME NOT NULL,
@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `hover_academic`.`turma` (
   PRIMARY KEY (`id_turma`),
     FOREIGN KEY (`usuarios_id_usuario`)
     REFERENCES `hover_academic`.`usuarios` (`id_usuario`),
-    FOREIGN KEY (`curos_id_curso`)
+    FOREIGN KEY (`cursos_id_curso`)
     REFERENCES `hover_academic`.`curos` (`id_curso`))
 ENGINE = InnoDB;
 
@@ -158,10 +158,10 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `hover_academic`.`boletim` (
   `id_boletim` INT NOT NULL AUTO_INCREMENT,
   `alunos_turma_id_aluno_turma` INT NOT NULL,
-  `bo_av1` DOUBLE(4,2) NULL,
-  `bo_av2` DOUBLE(4,2) NULL,
-  `bo_av3` DOUBLE(4,2) NULL,
-  `bo_av4` DOUBLE(4,2) NULL,
+  `av1` DOUBLE(4,2) NULL,
+  `av2` DOUBLE(4,2) NULL,
+  `av3` DOUBLE(4,2) NULL,
+  `av4` DOUBLE(4,2) NULL,
   PRIMARY KEY (`id_boletim`),
     FOREIGN KEY (`alunos_turma_id_aluno_turma`)
     REFERENCES `hover_academic`.`alunos_turma` (`id_aluno_turma`))
