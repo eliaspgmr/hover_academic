@@ -182,9 +182,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `hover_academic`.`cotatos`
+-- Table `hover_academic`.`contatos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hover_academic`.`cotatos` (
+CREATE TABLE IF NOT EXISTS `hover_academic`.`contatos` (
   `id_contato` INT NOT NULL AUTO_INCREMENT,
   `alunos_id_aluno` INT NOT NULL,
   `telefone` INT(11) NOT NULL,

@@ -3,7 +3,7 @@ package sample.model.DAO;
 import sample.connection.ConnectionHover;
 import sample.model.bean.Responsavel;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -50,34 +50,34 @@ public class ResponsavelDAO {
 
         Connection connection = ConnectionHover.getConnection();
         PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        List<Responsavel> responsavelList = new ArrayList<>();
+        ResultSet result = null;
+        List<Responsavel> responsaveis = new ArrayList<>();
 
         try {
 
             statement = connection.prepareStatement("SELECT * FROM responsavel");
-            resultSet = statement.executeQuery();
+            result = statement.executeQuery();
 
-            while(resultSet.next()) {
+            while(result.next()) {
 
                 Responsavel responsavel = new Responsavel(
-                        resultSet.getInt("id_responsavel"),
-                        resultSet.getString("nome"),
-                        resultSet.getString("data_nascimento"),
-                        resultSet.getString("rg"),
-                        resultSet.getString("cpf")
+                        result.getInt("id_responsavel"),
+                        result.getString("nome"),
+                        result.getString("data_nascimento"),
+                        result.getString("rg"),
+                        result.getString("cpf")
                 );
-                responsavelList.add(responsavel);
+                responsaveis.add(responsavel);
             }
 
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            ConnectionHover.closeConnection(connection, statement, resultSet);
+            ConnectionHover.closeConnection(connection, statement, result);
         }
 
-        return responsavelList;
+        return responsaveis;
     }
 
     //delete a responsavel from the system

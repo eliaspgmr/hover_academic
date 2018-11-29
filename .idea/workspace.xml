@@ -5,23 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/model/DAO/AlunoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/model/DAO/ResponsavelDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestAlunoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestCriptography.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestResponsavelDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/model/DAO/CancelamentoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/model/DAO/ContatoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/model/DAO/EnderecoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/model/DAO/FinanceiroDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/model/DAO/ParcelaDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/hover-academic-db-testes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/hover-academic-db-testes.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/hover-academic-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/hover-academic-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/DAO/AlunoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/DAO/AlunoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/DAO/ResponsavelDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/DAO/ResponsavelDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/DAO/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Cursos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Parcelas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Responsavel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Responsavel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Turmas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Contato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Contato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Endereco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/bean/Endereco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/view/LoginApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/view/LoginApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/DAO/AlunoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/DAO/AlunoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/DAO/ResponsavelDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/DAO/ResponsavelDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/bean/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/bean/Aluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/bean/Responsavel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/bean/Responsavel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/bean/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/bean/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/model/bean/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/bean/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/view/LoginApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/LoginApp.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,94 +94,20 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5093914">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/sample/view/LoginApp.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="167">
-                  <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Aluno.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="552">
-                  <caret line="132" column="22" lean-forward="true" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#2880#2881#0" expanded="true" />
-                    <element signature="e#2909#2910#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/AlunoDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="235">
-                  <caret line="22" column="52" lean-forward="true" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/TestAlunoDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/TestUserDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/db/hover-academic-db-model.png">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/view/LoginApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -213,27 +142,33 @@
         <option value="$PROJECT_DIR$/src/sample/model/bean/Frequencia.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/AlunoTurma.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/Cancelamento.java" />
-        <option value="$PROJECT_DIR$/src/sample/model/bean/Contato.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/Turmas.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/Financeiro.java" />
-        <option value="$PROJECT_DIR$/src/sample/model/bean/Endereco.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/Parcelas.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/Session.java" />
-        <option value="$PROJECT_DIR$/src/sample/view/LoginApp.java" />
         <option value="$PROJECT_DIR$/src/sample/view/MainApp.java" />
         <option value="$PROJECT_DIR$/src/sample/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/sample/view/Main.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/test/TestCripto.java" />
         <option value="$PROJECT_DIR$/src/test/TestResponsavel.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/Responsavel.java" />
-        <option value="$PROJECT_DIR$/src/sample/model/DAO/ResponsavelDAO.java" />
         <option value="$PROJECT_DIR$/src/test/TestResponsavelDAO.java" />
         <option value="$PROJECT_DIR$/src/sample/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/Aluno.java" />
         <option value="$PROJECT_DIR$/src/test/TestUserDAO.java" />
         <option value="$PROJECT_DIR$/src/test/TestAlunoDAO.java" />
         <option value="$PROJECT_DIR$/src/sample/model/DAO/AlunoDAO.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/DAO/ResponsavelDAO.java" />
+        <option value="$PROJECT_DIR$/src/sample/view/LoginApp.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/bean/Endereco.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/DAO/EnderecoDAO.java" />
+        <option value="$PROJECT_DIR$/db/hover-academic-db.sql" />
+        <option value="$PROJECT_DIR$/src/sample/model/bean/Contato.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/DAO/ContatoDAO.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/DAO/FinanceiroDAO.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/DAO/ParcelaDAO.java" />
+        <option value="$PROJECT_DIR$/src/sample/model/DAO/CancelamentoDAO.java" />
       </list>
     </option>
   </component>
@@ -261,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,58 +205,13 @@
             </path>
             <path>
               <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -336,7 +225,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543350142645" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543460042311" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -357,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestAlunoDAO">
+  <component name="RunManager" selected="Application.LoginApp">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -507,8 +396,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestAlunoDAO" />
         <item itemvalue="Application.LoginApp" />
+        <item itemvalue="Application.TestAlunoDAO" />
         <item itemvalue="Application.TestResponsavelDAO" />
         <item itemvalue="Application.TestCriptography" />
         <item itemvalue="Application.MainApp" />
@@ -547,7 +436,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50152904" visible="true" weight="0.14460154" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.50152904" visible="true" weight="0.14652957" />
       <window_info id="Structure" order="1" sideWeight="0.49847096" weight="0.24962293" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -586,6 +475,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
@@ -599,12 +491,12 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/view/Config.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
           <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/view/ConfigApp.java">
@@ -629,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/hover-academic-db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2319">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/bean/AlunoTurma.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -650,24 +535,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Cancelamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Contato.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -678,31 +549,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Endereco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Financeiro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="117" column="5" lean-forward="true" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Frequencia.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Parcela.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -749,25 +599,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/controller/ConfigController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -780,12 +618,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="142" column="144" lean-forward="true" selection-start-line="142" selection-start-column="144" selection-end-line="142" selection-end-column="144" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/config/RWConfig.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -832,16 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/ResponsavelDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Responsavel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -859,26 +687,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/LoginApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/hover-academic-db-model.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Aluno.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="132" column="22" lean-forward="true" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+        <state relative-caret-position="1394">
+          <caret line="104" column="21" lean-forward="true" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
           <folding>
-            <element signature="e#2880#2881#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
+            <element signature="e#2441#2442#0" expanded="true" />
+            <element signature="e#2469#2470#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -893,30 +708,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/test/TestAlunoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="323">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/ResponsavelDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="170" column="20" lean-forward="true" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Endereco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Contato.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/ContatoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="101" column="23" lean-forward="true" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Financeiro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/AlunoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="22" column="52" lean-forward="true" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="2312">
+          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/TestAlunoDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/FinanceiroDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="544">
+          <caret line="110" column="26" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/ParcelaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="169" column="24" selection-start-line="169" selection-start-column="24" selection-end-line="169" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Parcela.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/CancelamentoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="97" column="28" lean-forward="true" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/bean/Cancelamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/hover-academic-db-model.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/hover-academic-db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/model/DAO/EnderecoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="111" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="111" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/LoginApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

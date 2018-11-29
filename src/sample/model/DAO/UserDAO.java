@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 public class UserDAO {
 
     //Create a new User on system
-    public void createUser(Usuario user) {
+    public void create(Usuario user) {
 
         Connection connection = ConnectionHover.getConnection();
         PreparedStatement statement = null;
@@ -32,8 +32,8 @@ public class UserDAO {
             statement = connection.prepareStatement("INSERT INTO usuarios (nome, login, senha, cargo) VALUES (?,?,?,?)");
             statement.setString(1, user.getNome());
             statement.setString(2, user.getLogin());
-            statement.setString(4, Criptography.enc( user.getSenha()));
-            statement.setString(3, user.getCargo());
+            statement.setString(3, Criptography.enc( user.getSenha()));
+            statement.setString(4, user.getCargo());
 
             statement.executeUpdate();
 
@@ -48,12 +48,12 @@ public class UserDAO {
     }
 
     //List all the users of the system
-    public List<Usuario> listUser() {
+    public List<Usuario> listUsers() {
 
         Connection connection = ConnectionHover.getConnection();
         PreparedStatement statement = null;
         ResultSet result = null;
-        List<Usuario> userList = new ArrayList<>();
+        List<Usuario> usuarios = new ArrayList<>();
 
         try {
 
@@ -62,14 +62,14 @@ public class UserDAO {
 
             while(result.next()) {
 
-                Usuario user = new Usuario(
+                Usuario usuario = new Usuario(
                         result.getInt("id_usuario"),
                         result.getString("nome"),
                         result.getString("login"),
                         result.getString("senha"),
                         result.getString("cargo")
                 );
-                userList.add(user);
+                usuarios.add(usuario);
 
             }
 
@@ -79,7 +79,7 @@ public class UserDAO {
             ConnectionHover.closeConnection(connection, statement, result);
         }
 
-        return userList;
+        return usuarios;
     }
 
     //Delete a specific user
