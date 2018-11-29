@@ -1,4 +1,4 @@
-package sample.view;
+package sample.Application;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +11,7 @@ public class ConfigApp {
     
     public ConfigApp(Stage stageOwner) throws IOException {
         
-        Parent configRoot = FXMLLoader.load(getClass().getResource("Config.fxml"));
+        Parent configRoot = FXMLLoader.load(getClass().getResource("../view/Config.fxml"));
         configStage = new Stage();
         configStage.setTitle("Config");
         configStage.setWidth(287);

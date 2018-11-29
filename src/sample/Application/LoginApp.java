@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sample.view;
+package sample.Application;
 
 
 import javafx.application.Application;
@@ -22,7 +22,7 @@ public class LoginApp extends Application {
     static Stage loginStage;
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
         loginStage = primaryStage;
         loginStage.setScene(new Scene(root));
         loginStage.initStyle(StageStyle.UNDECORATED);

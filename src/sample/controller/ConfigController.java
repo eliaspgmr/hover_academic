@@ -6,7 +6,7 @@ import javafx.fxml.Initializable;
 import sample.config.RWConfig;
 import sample.model.bean.Config;
 import sample.model.bean.ServerSession;
-import sample.view.ConfigApp;
+import sample.Application.ConfigApp;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;

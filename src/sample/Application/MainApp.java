@@ -1,4 +1,4 @@
-package sample.view;
+package sample.Application;
 
 /*
 * Hover Academic
@@ -22,7 +22,7 @@ public class MainApp {
 
     public MainApp() throws IOException {
         
-        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../view/Main.fxml"));
         mainStage.setTitle("Hover-Academic");
         mainStage.setScene(new Scene(root));
         mainStage.show();

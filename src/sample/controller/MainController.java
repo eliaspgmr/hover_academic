@@ -5,8 +5,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import sample.model.bean.Session;
-import sample.view.LoginApp;
-import sample.view.MainApp;
+import sample.Application.LoginApp;
+import sample.Application.MainApp;
 
 import java.net.URL;
 import java.util.ResourceBundle;
