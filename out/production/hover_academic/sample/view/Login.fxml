@@ -16,9 +16,9 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
    <children>
-      <StackPane prefHeight="400.0" prefWidth="282.0" style="-fx-background-color: #2887C9;" >
+      <StackPane prefHeight="400.0" prefWidth="282.0" style="-fx-background-color: #2887C9;">
          <children>
-            <ImageView fitHeight="400.0" fitWidth="289.0" pickOnBounds="true" preserveRatio="true" onMousePressed="#pressed" onMouseDragged="#dragged">
+            <ImageView fitHeight="400.0" fitWidth="289.0" onMouseDragged="#dragged" onMousePressed="#pressed" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/logo/capa.png" />
                </image>
@@ -55,7 +55,7 @@
             </HBox>
             <ImageView fitHeight="33.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/logo/logo_inline.png" />
+                  <Image url="@../img/logo/logo_inline_test.png" />
                </image>
                <VBox.margin>
                   <Insets bottom="20.0" left="90.0" right="90.0" top="25.0" />

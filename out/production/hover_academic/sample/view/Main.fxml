@@ -140,7 +140,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
-                  <ImageView fx:id="btnSair" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#logoff">
+                  <ImageView fx:id="btnSair" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#logoff" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
                         <Insets left="38.75" top="15.0" />
                      </HBox.margin>
@@ -169,7 +169,7 @@
                <children>
                   <ImageView fitHeight="30.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/logo/logo_inline.png" />
+                        <Image url="@../img/logo/logo_inline_test.png" />
                      </image>
                      <HBox.margin>
                         <Insets bottom="10.0" left="44.5" right="44.5" top="10.0" />
