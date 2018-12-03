@@ -20,6 +20,7 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
 
     @FXML Label txtNome = new Label();
+    @FXML Label txtTitulo = new Label();
     @FXML ImageView btnClose = new ImageView();
     @FXML AnchorPane contentField = new AnchorPane();
     @FXML Button btnAlunos = new Button();
@@ -47,6 +48,7 @@ public class MainController implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("../view/Alunos.fxml"));
             contentField.getChildren().clear();
             contentField.getChildren().add(root);
+            txtTitulo.setText("Alunos");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,6 +63,7 @@ public class MainController implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("../view/Financeiro.fxml"));
             contentField.getChildren().clear();
             contentField.getChildren().add(root);
+            txtTitulo.setText("Financeiro");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -75,6 +78,7 @@ public class MainController implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("../view/Relatorios.fxml"));
             contentField.getChildren().clear();
             contentField.getChildren().add(root);
+            txtTitulo.setText("Relatórios");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -89,6 +93,7 @@ public class MainController implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("../view/Usuarios.fxml"));
             contentField.getChildren().clear();
             contentField.getChildren().add(root);
+            txtTitulo.setText("Usuários");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -100,9 +105,10 @@ public class MainController implements Initializable {
     public void loadConfig (ActionEvent event) {
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("../view/Configuracao.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../view/Configuracoes.fxml"));
             contentField.getChildren().clear();
             contentField.getChildren().add(root);
+            txtTitulo.setText("Configurações");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -114,5 +120,6 @@ public class MainController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         txtNome.setText(Session.getUserLogin());
         this.loadAlunos(new ActionEvent());
+        txtTitulo.setText("Alunos");
     }
 }

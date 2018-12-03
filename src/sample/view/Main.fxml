@@ -96,7 +96,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="btnConfig" alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#loadConfig" prefHeight="35.0" prefWidth="215.0" text="Configuração" textFill="#e7e6e8">
+                  <JFXButton fx:id="btnConfig" alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#loadConfig" prefHeight="35.0" prefWidth="215.0" text="Configurações" textFill="#e7e6e8">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -198,7 +198,7 @@
                </children>
             </HBox>
             <Separator layoutX="213.0" orientation="VERTICAL" prefHeight="50.0" prefWidth="4.0" />
-            <Label fx:id="txtTitulo" layoutX="238.0" layoutY="18.0" prefHeight="20.0" prefWidth="127.0" text="Alunos" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="15.0">
+            <Label fx:id="txtTitulo" layoutX="238.0" layoutY="18.0" prefHeight="21.0" prefWidth="213.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="15.0">
                <font>
                   <Font size="14.0" />
                </font>
