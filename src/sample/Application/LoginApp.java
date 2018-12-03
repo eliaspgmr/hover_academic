@@ -6,7 +6,6 @@
 package sample.Application;
 
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

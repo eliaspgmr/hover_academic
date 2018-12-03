@@ -24,7 +24,7 @@
                         <Insets left="20.0" top="20.0" />
                      </padding>
                   </Label>
-                  <JFXButton fx:id="btnProducts" alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="35.0" prefWidth="215.0" text="Alunos" textFill="#e7e6e8">
+                  <JFXButton fx:id="btnAlunos" alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#loadAlunos" prefHeight="35.0" prefWidth="215.0" text="Alunos" textFill="#e7e6e8">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
@@ -42,7 +42,7 @@
                         <Insets left="25.0" />
                      </padding>
                   </JFXButton>
-                  <JFXButton fx:id="btnStock" alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="35.0" prefWidth="215.0" text="Financiro" textFill="#e7e6e8">
+                  <JFXButton fx:id="btnFinanceiro" alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#loadFinanceiro" prefHeight="35.0" prefWidth="215.0" text="Financeiro" textFill="#e7e6e8">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -60,7 +60,7 @@
                         <Insets left="25.0" />
                      </padding>
                   </JFXButton>
-                  <JFXButton fx:id="btnReport" alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="35.0" prefWidth="215.0" text="Relatórios" textFill="#e7e6e8">
+                  <JFXButton fx:id="btnRelatorios" alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#loadRelatorios" prefHeight="35.0" prefWidth="215.0" text="Relatórios" textFill="#e7e6e8">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -78,7 +78,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="btnUser" alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="35.0" prefWidth="215.0" text="Usuários" textFill="#e7e6e8">
+                  <JFXButton fx:id="btnUsuarios" alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#loadUsuarios" prefHeight="35.0" prefWidth="215.0" text="Usuários" textFill="#e7e6e8">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -96,7 +96,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="btnConfig" alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="35.0" prefWidth="215.0" text="Configuração" textFill="#e7e6e8">
+                  <JFXButton fx:id="btnConfig" alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#loadConfig" prefHeight="35.0" prefWidth="215.0" text="Configuração" textFill="#e7e6e8">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -120,7 +120,7 @@
                <children>
                   <ImageView fx:id="btnClose" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
-                        <Insets bottom="10.0" left="38.75" top="15.0" />
+                        <Insets bottom="10.0" left="32.0" top="15.0" />
                      </HBox.margin>
                      <image>
                         <Image url="@../img/icons/power.png" />
@@ -131,7 +131,7 @@
                   </ImageView>
                   <ImageView fx:id="btnBlock" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
-                        <Insets left="38.75" top="15.0" />
+                        <Insets left="45.0" top="15.0" />
                      </HBox.margin>
                      <image>
                         <Image url="@../img/icons/block.png" />
@@ -142,7 +142,7 @@
                   </ImageView>
                   <ImageView fx:id="btnSair" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#logoff" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
-                        <Insets left="38.75" top="15.0" />
+                        <Insets left="43.0" right="30.0" top="15.0" />
                      </HBox.margin>
                      <image>
                         <Image url="@../img/icons/logof.png" />
@@ -157,7 +157,7 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane fx:id="content" prefHeight="459.0" prefWidth="593.0" style="-fx-background-color: #E4E5E5;" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="contentField" prefHeight="459.0" prefWidth="593.0" style="-fx-background-color: #E4E5E5;" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin></AnchorPane>

@@ -3,14 +3,21 @@ package sample.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import sample.model.bean.Session;
 import sample.Application.ConfigApp;
 import sample.Application.MainApp;
 
 import javafx.scene.input.MouseEvent;
+
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
@@ -21,13 +28,16 @@ import sample.model.bean.Usuario;
 
 
 
-public class LoginController {
+public class LoginController implements Initializable {
     
     @FXML ImageView btnConfig = new ImageView();
     @FXML ImageView btnClose = new ImageView();
     @FXML JFXTextField txtLogin = new JFXTextField();
     @FXML JFXPasswordField txtPassword = new JFXPasswordField();
     @FXML JFXButton btnLogin = new JFXButton();
+    @FXML Label textUserMessage = new Label();
+    @FXML Label textPassMessage = new Label();
+
 
     double x = 0;
     double y = 0;
@@ -36,6 +46,16 @@ public class LoginController {
     public void btnConfigAction () throws IOException {
 
         new ConfigApp(LoginApp.getLoginStage());
+
+    }
+
+    @FXML
+    public void clearUserMessage(KeyEvent event) {
+
+    }
+
+    @FXML
+    public void clearPassMessage(KeyEvent event) {
 
     }
     
@@ -51,18 +71,26 @@ public class LoginController {
         Usuario user = userDAO.select(txtLogin.getText());
 
         if(user.getLogin() == null) {
-            System.out.println("Usuário Inválido!");
-        }else if(Criptography.enc(txtPassword.getText()).equals(user.getSenha())){
+           // System.out.println("Usuário Inválido!");
+            textUserMessage.setText("Usuário Inválido!");
+            textPassMessage.setText(null);
+        }else {
+            textUserMessage.setText(null);
+            textPassMessage.setText(null);
+            if(Criptography.enc(txtPassword.getText()).equals(user.getSenha())){
 
-            Session.start(user);
+                Session.start(user);
 
-            txtLogin.setText(null);
-            txtPassword.setText(null);
-            LoginApp.getLoginStage().close();
-            new MainApp();
+                txtLogin.setText(null);
+                txtPassword.setText(null);
 
-        }else{
-            System.out.println("Senha Inválida!");
+                LoginApp.getLoginStage().close();
+                new MainApp();
+
+            }else{
+                //System.out.println("Senha Inválida!");
+                textPassMessage.setText("Senha Inválida!");
+            }
         }
 
     }
@@ -80,5 +108,11 @@ public class LoginController {
     public void pressed(MouseEvent event) {
         x = event.getSceneX();
         y = event.getSceneY();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        txtLogin.setText("root");
+        txtPassword.setText("1234");
     }
 }
