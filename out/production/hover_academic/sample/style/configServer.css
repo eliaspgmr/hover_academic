@@ -1,0 +1,17 @@
+.textFields {
+
+    -fx-text-fill: #E7E6E8;
+    -fx-prompt-text-fill: #9A999A;
+    -fx-background-color: #33444C;
+    -fx-border-radius: 3 3 0 0;
+    -fx-background-radius: 3 3 0 0;
+    -jfx-unfocus-color: #33444C;
+
+}
+
+.textFields > .input-line {
+    
+    -fx-pref-height: 1px;
+    -fx-translate-y: 0px;
+    
+}

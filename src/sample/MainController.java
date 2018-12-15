@@ -10,8 +10,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import sample.model.bean.Session;
-import sample.LoginApp;
-import sample.MainApp;
 
 import java.io.IOException;
 import java.net.URL;

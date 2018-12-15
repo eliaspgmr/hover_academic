@@ -95,7 +95,7 @@
                   <Insets left="50.0" />
                </VBox.margin>
             </Label>
-            <JFXButton id="btnLogin" fx:id="btnLogin" onAction="#login" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #1A84AC;" text="Log in" textFill="#e7e6e8">
+            <JFXButton id="btnLogin" fx:id="btnLogin" buttonType="RAISED" onAction="#login" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #0F7DBA;" text="Log in" textFill="#e7e6e8">
                <font>
                   <Font size="14.0" />
                </font>
