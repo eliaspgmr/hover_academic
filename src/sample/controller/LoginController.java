@@ -8,9 +8,10 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import jfxOptionPane.application.JFXOptionPane;
 import sample.model.bean.Session;
-import sample.Application.ConfigApp;
-import sample.Application.MainApp;
+import sample.ConfigApp;
+import sample.MainApp;
 
 import javafx.scene.input.MouseEvent;
 
@@ -22,7 +23,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import sample.criptography.Criptography;
-import sample.Application.LoginApp;
+import sample.LoginApp;
 import sample.model.DAO.UserDAO;
 import sample.model.bean.Usuario;
 
@@ -37,6 +38,8 @@ public class LoginController implements Initializable {
     @FXML JFXButton btnLogin = new JFXButton();
     @FXML Label textUserMessage = new Label();
     @FXML Label textPassMessage = new Label();
+
+    JFXOptionPane op = new JFXOptionPane();
 
 
     double x = 0;
@@ -73,6 +76,7 @@ public class LoginController implements Initializable {
         if(user.getLogin() == null) {
            // System.out.println("Usuário Inválido!");
             textUserMessage.setText("Usuário Inválido!");
+            op.showErrorDialog("Usuário Inválido!");
             textPassMessage.setText(null);
         }else {
             textUserMessage.setText(null);
@@ -84,8 +88,10 @@ public class LoginController implements Initializable {
                 txtLogin.setText(null);
                 txtPassword.setText(null);
 
+                MainApp mainApp = new MainApp();
+
                 LoginApp.getLoginStage().close();
-                new MainApp();
+
 
             }else{
                 //System.out.println("Senha Inválida!");

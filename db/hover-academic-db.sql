@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `hover_academic`.`turma` (
     FOREIGN KEY (`usuarios_id_usuario`)
     REFERENCES `hover_academic`.`usuarios` (`id_usuario`),
     FOREIGN KEY (`cursos_id_curso`)
-    REFERENCES `hover_academic`.`curos` (`id_curso`))
+    REFERENCES `hover_academic`.`cursos` (`id_curso`))
 ENGINE = InnoDB;
 
 

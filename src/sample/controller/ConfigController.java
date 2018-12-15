@@ -3,10 +3,12 @@ package sample.controller;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.Initializable;
+import jfxOptionPane.application.JFXOptionPane;
+import sample.LoginApp;
 import sample.config.RWConfig;
 import sample.model.bean.Config;
 import sample.model.bean.ServerSession;
-import sample.Application.ConfigApp;
+import sample.ConfigApp;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -17,6 +19,8 @@ public class ConfigController implements Initializable{
     @FXML JFXPasswordField txtPass = new JFXPasswordField();
     @FXML JFXTextField txtServer = new JFXTextField();
     @FXML JFXTextField txtPort = new JFXTextField();
+
+    JFXOptionPane optionPane = new JFXOptionPane(LoginApp.getLoginStage());
     
     @FXML
     public void close() { 
@@ -38,13 +42,14 @@ public class ConfigController implements Initializable{
             RWConfig.write(dados);
             if(RWConfig.getWriteValue()) {
                 ServerSession.update();
+                optionPane.showMessageDialog("Salvo","Servidor salvo com sucesso!");
                 ConfigApp.getStage().close();
             }else {
-                System.out.println("Problema ao salvar dados");
+                optionPane.showErrorDialog("Problema ao salvar dados");
             }
             
         }else {
-            System.out.println("The file config couldn't been created!");
+            optionPane.showErrorDialog("The file config couldn't been created!");
         }
         
     }
