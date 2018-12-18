@@ -3,12 +3,16 @@ package sample.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-import jfxOptionPane.application.JFXOptionPane;
+//import jfxOptionPane.application.JFXOptionPane;
 import sample.model.bean.Session;
 import sample.ConfigApp;
 import sample.MainApp;
@@ -39,7 +43,7 @@ public class LoginController implements Initializable {
     @FXML Label textUserMessage = new Label();
     @FXML Label textPassMessage = new Label();
 
-    JFXOptionPane op = new JFXOptionPane();
+    //JFXOptionPane optionPane = new JFXOptionPane(LoginApp.getLoginStage());
 
 
     double x = 0;
@@ -48,55 +52,63 @@ public class LoginController implements Initializable {
     @FXML 
     public void btnConfigAction () throws IOException {
 
+        //Tratar erros
         new ConfigApp(LoginApp.getLoginStage());
-
-    }
-
-    @FXML
-    public void clearUserMessage(KeyEvent event) {
-
-    }
-
-    @FXML
-    public void clearPassMessage(KeyEvent event) {
 
     }
     
     @FXML
     public void close(){
-        LoginApp.getLoginStage().close();
+
+       LoginApp.getLoginStage().close();
+       Platform.exit();
+       System.exit(0);
+
     }
     
     @FXML
     public void login(ActionEvent evt) throws IOException {
 
-        UserDAO userDAO = new UserDAO();
-        Usuario user = userDAO.select(txtLogin.getText());
+        if(txtLogin.getText().equals("")) {
 
-        if(user.getLogin() == null) {
-           // System.out.println("Usuário Inválido!");
-            textUserMessage.setText("Usuário Inválido!");
-            op.showErrorDialog("Usuário Inválido!");
+            textUserMessage.setText("Digite um usuário!");
             textPassMessage.setText(null);
+
         }else {
-            textUserMessage.setText(null);
-            textPassMessage.setText(null);
-            if(Criptography.enc(txtPassword.getText()).equals(user.getSenha())){
 
-                Session.start(user);
+            UserDAO userDAO = new UserDAO();
+            Usuario user = userDAO.select(txtLogin.getText());
 
-                txtLogin.setText(null);
-                txtPassword.setText(null);
+            if(user.getLogin() == null) {
 
-                MainApp mainApp = new MainApp();
+                // System.out.println("Usuário Inválido!");
+                textUserMessage.setText(txtLogin.getText()+" não é  um usuário cadastrado!");
+                textPassMessage.setText(null);
 
-                LoginApp.getLoginStage().close();
+            }else {
+
+                textUserMessage.setText(null);
+                textPassMessage.setText(null);
+
+                if(Criptography.enc(txtPassword.getText()).equals(user.getSenha())){
+
+                    Session.start(user);
+
+                    txtLogin.setText(null);
+                    txtPassword.setText(null);
+
+                    new MainApp();
+
+                    LoginApp.getLoginStage().close();
 
 
-            }else{
-                //System.out.println("Senha Inválida!");
-                textPassMessage.setText("Senha Inválida!");
+                }else{
+                    //System.out.println("Senha Inválida!");
+                    textPassMessage.setText("Senha Inválida!");
+                }
+
             }
+
         }
 
     }
@@ -120,5 +132,24 @@ public class LoginController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         txtLogin.setText("root");
         txtPassword.setText("1234");
+
+        txtLogin.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> ov, String oldValue, String newValue) {
+                // oldValue = Texto anterior a edição
+                // newValue = Texto atual
+                textUserMessage.setText(null);
+            }
+        });
+
+        txtPassword.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> ov, String oldValue, String newValue) {
+                // oldValue = Texto anterior a edição
+                // newValue = Texto atual
+                textPassMessage.setText(null);
+            }
+        });
+
     }
 }

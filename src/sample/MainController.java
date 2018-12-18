@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import jfxOptionPane.application.JFXOptionPane;
 import sample.model.bean.Session;
 
 import java.io.IOException;
@@ -27,16 +30,28 @@ public class MainController implements Initializable {
     @FXML Button btnUsuarios = new Button();
     @FXML Button btnConfig = new Button();
 
+    JFXOptionPane optionPane = new JFXOptionPane(MainApp.getStage());
+
     @FXML
     public void close() {
-        MainApp.getStage().close();
+
+        if(optionPane.showConfirmDialog("Deseja mesmo sair?")) {
+            MainApp.getStage().close();
+            Platform.exit();
+            System.exit(0);
+        }
+
     }
 
     @FXML
-    public void logoff() {
+    public void logoff() throws Exception {
+
         Session.close();
         MainApp.getStage().close();
-        LoginApp.getLoginStage().show();
+        new LoginApp().start(new Stage());
+
+        //LoginApp.getLoginStage().show();
+
     }
 
     @FXML
@@ -49,7 +64,7 @@ public class MainController implements Initializable {
             txtTitulo.setText("Alunos");
 
         } catch (IOException e) {
-            e.printStackTrace();
+            optionPane.showErrorDialog(e.getMessage());
         }
 
     }
@@ -66,7 +81,7 @@ public class MainController implements Initializable {
             txtTitulo.setText("Financeiro");
 
         } catch (IOException e) {
-            e.printStackTrace();
+            optionPane.showErrorDialog(e.getMessage());
         }
 
     }
@@ -81,7 +96,7 @@ public class MainController implements Initializable {
             txtTitulo.setText("Relatórios");
 
         } catch (IOException e) {
-            e.printStackTrace();
+            optionPane.showErrorDialog(e.getMessage());
         }
 
     }
@@ -96,7 +111,7 @@ public class MainController implements Initializable {
             txtTitulo.setText("Usuários");
 
         } catch (IOException e) {
-            e.printStackTrace();
+            optionPane.showErrorDialog(e.getMessage());
         }
 
     }
@@ -111,7 +126,7 @@ public class MainController implements Initializable {
             txtTitulo.setText("Configurações");
 
         } catch (IOException e) {
-            e.printStackTrace();
+            optionPane.showErrorDialog(e.getMessage());
         }
 
     }

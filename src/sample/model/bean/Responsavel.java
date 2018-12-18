@@ -21,6 +21,7 @@ public class Responsavel {
     }
 
     public Responsavel(String nome, String dataNascimento, String rg, String cpf) {
+        this.id = 0;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.rg = rg;

@@ -21,6 +21,7 @@ public class Usuario {
     }
 
     public Usuario(String nome, String login, String senha, String cargo) {
+        this.id = 0;
         this.nome = nome;
         this.login = login;
         this.senha = senha;

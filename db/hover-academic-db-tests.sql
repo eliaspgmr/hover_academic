@@ -1,45 +1,54 @@
 USE `hover_academic` ;
+DROP DATABASE `hover_academic`;
 
 
 -- ---------- usuarios -------------------
 desc usuarios;
+drop table usuarios;
 
 insert into usuarios
-(nome, login, senha, cargo)
+(us_nome, us_login, us_senha, us_cargo)
 values
-('Elias Ferreira','root','D+JTNjUUtkyjN40BHSeFrw==','Professor');
+('Administrador','root','D+JTNjUUtkyjN40BHSeFrw==','administrador');
 
 select * from usuarios;
-
-delete from usuarios where login='elias';
+select * from usuarios where us_login='root';
+delete from usuarios where us_login='root';
 -- ---------------------------------------
+
+
+
 -- ---------- responsavel -------------------
 desc responsavel;
 
 insert into responsavel
-(nome, data_nascimento, rg, cpf)
+(res_nome, res_data_nascimento, res_rg, res_cpf)
 values
 ('Carlos Henrique','1991/03/05','20072149501','05116544303');
 
 select * from responsavel;
-
 select * from responsavel where id_responsavel = 1;
-
 delete from responsavel where id_responsavel= 3;
 -- ---------------------------------------
+
+
+
 -- ---------- alunos -------------------
 desc alunos;
 insert into alunos
-(usuarios_id_usuario, responsavel_id_responsavel, nome, data_nascimento, rg, cpf, sexo, obs, status)
+(usuarios_id_usuario, responsavel_id_responsavel, al_nome, al_data_nascimento, al_rg, al_cpf, al_sexo, al_obs, al_status)
 values
-('1','2','marcelo','2005/05/27','20054589621','15975345602','m','','1');
+('2', null,'Rebeca Ferreira da Silva','2008/05/08','20084584528','15816544303','f',null,'1');
 
 select * from alunos;
 
-delete from alunos where id_aluno = 5;
+delete from alunos where id_aluno = 1;
 
 drop table alunos;
 -- ---------------------------------------
+
+
+
 -- ---------- financeiro -------------------
 desc financeiro;
 
@@ -52,6 +61,9 @@ select * from financeiro;
 
 drop table financeiro;
 -- ---------------------------------------
+
+
+
 -- ---------- cancelamento -------------------
 desc cancelamento;
 
@@ -64,6 +76,9 @@ select * from cancelamento;
 
 drop table cancelamento;
 -- ---------------------------------------
+
+
+
 -- ---------- parcelas -------------------
 desc parcelas;
 

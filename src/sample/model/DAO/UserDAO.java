@@ -29,7 +29,7 @@ public class UserDAO {
 
         try {
 
-            statement = connection.prepareStatement("INSERT INTO usuarios (nome, login, senha, cargo) VALUES (?,?,?,?)");
+            statement = connection.prepareStatement("INSERT INTO usuarios (us_nome, us_login, us_senha, us_cargo) VALUES (?,?,?,?)");
             statement.setString(1, user.getNome());
             statement.setString(2, user.getLogin());
             statement.setString(3, Criptography.enc( user.getSenha()));
@@ -64,10 +64,10 @@ public class UserDAO {
 
                 Usuario usuario = new Usuario(
                         result.getInt("id_usuario"),
-                        result.getString("nome"),
-                        result.getString("login"),
-                        result.getString("senha"),
-                        result.getString("cargo")
+                        result.getString("us_nome"),
+                        result.getString("us_login"),
+                        result.getString("us_senha"),
+                        result.getString("us_cargo")
                 );
                 usuarios.add(usuario);
 
@@ -99,7 +99,7 @@ public class UserDAO {
             JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+            JOptionPane.showMessageDialog(null, "Problema ao excluir!\n " +ex.getMessage());
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -116,17 +116,17 @@ public class UserDAO {
 
         try {
 
-            statement = connection.prepareStatement("SELECT * FROM usuarios WHERE login = ?");
+            statement = connection.prepareStatement("SELECT * FROM usuarios WHERE us_login = ?");
             statement.setString(1, login);
             result = statement.executeQuery();
 
             if(result.next()) {
 
                 user.setId(result.getInt("id_usuario"));
-                user.setNome(result.getString("nome"));
-                user.setLogin(result.getString("login"));
-                user.setSenha(result.getString("senha"));
-                user.setCargo(result.getString("cargo"));
+                user.setNome(result.getString("us_nome"));
+                user.setLogin(result.getString("us_login"));
+                user.setSenha(result.getString("us_senha"));
+                user.setCargo(result.getString("us_cargo"));
 
             }
 
@@ -155,10 +155,10 @@ public class UserDAO {
             if(result.next()) {
 
                 user.setId(result.getInt("id_usuario"));
-                user.setNome(result.getString("nome"));
-                user.setLogin(result.getString("login"));
-                user.setSenha(result.getString("senha"));
-                user.setCargo(result.getString("cargo"));
+                user.setNome(result.getString("us_nome"));
+                user.setLogin(result.getString("us_login"));
+                user.setSenha(result.getString("us_senha"));
+                user.setCargo(result.getString("us_cargo"));
 
             }
 

@@ -36,8 +36,8 @@ public class AlunoDAO {
                             " status" +
                             ")VALUES (?,?,?,?,?,?,?,?,?)"
             );
-            statement.setInt(1, aluno.getIdUsuario());
-            statement.setInt(2, aluno.getIdResponsavel());
+            statement.setInt(1, aluno.getUsuario().getId());
+            statement.setInt(2, aluno.getResponsavel().getId());
             statement.setString(3, aluno.getNome());
             statement.setString(4, aluno.getDataNascimento());
             statement.setString(5, aluno.getRg());
@@ -75,8 +75,49 @@ public class AlunoDAO {
 
                 Aluno aluno = new Aluno(
                         result.getInt("id_aluno"),
-                        result.getInt("usuarios_id_usuario"),
-                        result.getInt("responsavel_id_responsavel"),
+                        //result.getInt("usuarios_id_usuario"),
+                        //result.getInt("responsavel_id_responsavel"),
+                        result.getString("nome"),
+                        result.getString("data_nascimento"),
+                        result.getString("rg"),
+                        result.getString("cpf"),
+                        result.getString("sexo"),
+                        result.getString("obs"),
+                        result.getBoolean("status")
+                );
+                alunos.add(aluno);
+
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            ConnectionHover.closeConnection(connection, statement, result);
+        }
+
+        return alunos;
+    }
+
+    //List all the alunos of the system
+    public List<Aluno> select(String nome) {
+
+        Connection connection = ConnectionHover.getConnection();
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        List<Aluno> alunos = new ArrayList<>();
+
+        try {
+
+            statement = connection.prepareStatement("SELECT * FROM alunos WHERE nome = ?");
+            statement.setString(1, nome);
+            result = statement.executeQuery();
+
+            while(result.next()) {
+
+                Aluno aluno = new Aluno(
+                        result.getInt("id_aluno"),
+                        //result.getInt("usuarios_id_usuario"),
+                        //result.getInt("responsavel_id_responsavel"),
                         result.getString("nome"),
                         result.getString("data_nascimento"),
                         result.getString("rg"),
@@ -115,8 +156,8 @@ public class AlunoDAO {
             if(result.next()) {
 
                 aluno.setId(result.getInt("id_aluno"));
-                aluno.setIdUsuario(result.getInt("usuarios_id_usuario"));
-                aluno.setIdResponsavel(result.getInt("responsavel_id_responsavel"));
+                //aluno.setIdUsuario(result.getInt("usuarios_id_usuario"));
+                //aluno.setIdResponsavel(result.getInt("responsavel_id_responsavel"));
                 aluno.setNome(result.getString("nome"));
                 aluno.setDataNascimento(result.getString("data_nascimento"));
                 aluno.setRg(result.getString("rg"));
@@ -125,7 +166,7 @@ public class AlunoDAO {
                 aluno.setObs(result.getString("obs"));
                 aluno.setStatus(result.getBoolean("status"));
 
-            }else {
+            } else {
                 JOptionPane.showMessageDialog(null, "Aluno não encontrado");
             }
 
