@@ -10,27 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/hover_academic_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/colors/hover-cores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/colors/hover-cores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/hover-academic-db-tests.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/hover-academic-db-tests.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/MainApp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/MainApp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/model/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/model/DAO/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/style/config.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/style/config.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/style/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/style/test.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Configuracoes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Configuracoes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Financeiro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Financeiro.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Relatorios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Relatorios.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Usuarios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hover_academic/sample/view/Usuarios.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/style/config.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/style/config.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/style/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/style/test.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/Configuracoes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/Configuracoes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/Financeiro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/Financeiro.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/view/Relatorios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/Relatorios.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/view/Usuarios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/view/Usuarios.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -102,23 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2565">
-              <caret line="135" column="68" lean-forward="true" selection-start-line="135" selection-start-column="68" selection-end-line="135" selection-end-column="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="79" column="62" lean-forward="true" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
+            <state relative-caret-position="2109">
+              <caret line="135" column="68" selection-start-line="135" selection-start-column="68" selection-end-line="135" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,7 +166,6 @@
         <option value="$PROJECT_DIR$/src/sample/LoginApp.java" />
         <option value="$PROJECT_DIR$/src/sample/style/configServer.css" />
         <option value="$PROJECT_DIR$/src/sample/MainController.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/sample/model/DAO/AlunoDAO.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/Usuario.java" />
         <option value="$PROJECT_DIR$/src/sample/model/bean/Responsavel.java" />
@@ -205,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/sample/view/Configuracoes.fxml" />
         <option value="$PROJECT_DIR$/src/sample/view/Financeiro.fxml" />
         <option value="$PROJECT_DIR$/src/sample/view/Relatorios.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/sample/view/Usuarios.fxml" />
       </list>
     </option>
@@ -233,6 +205,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,12 +232,17 @@
               <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hover_academic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hover_academic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,7 +255,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545251728158" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545259525439" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/JFXOptionPane.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -493,9 +472,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.50152904" visible="true" weight="0.13496144" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50152904" visible="true" weight="0.13624679" />
       <window_info id="Structure" order="1" sideWeight="0.49847096" weight="0.24962293" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -702,12 +680,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="73" column="64" lean-forward="true" selection-start-line="73" selection-start-column="64" selection-end-line="73" selection-end-column="64" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/controller/FinanceiroController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -919,75 +897,72 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Alunos.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="197" selection-start-line="6" selection-start-column="84" selection-end-line="6" selection-end-column="197" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Config.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Configuracoes.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="162" selection-start-line="6" selection-start-column="162" selection-end-line="6" selection-end-column="162" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Financeiro.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="162" selection-start-line="6" selection-start-column="162" selection-end-line="6" selection-end-column="162" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Relatorios.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="162" selection-start-line="7" selection-start-column="162" selection-end-line="7" selection-end-column="162" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/view/Main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="36" selection-end-column="36" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/Usuarios.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="42" column="86" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2565">
-          <caret line="135" column="68" lean-forward="true" selection-start-line="135" selection-start-column="68" selection-end-line="135" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="79" column="62" lean-forward="true" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
+        <state relative-caret-position="209">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/view/Usuarios.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="92" column="237" selection-start-line="92" selection-start-column="237" selection-end-line="92" selection-end-column="237" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2109">
+          <caret line="135" column="68" selection-start-line="135" selection-start-column="68" selection-end-line="135" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

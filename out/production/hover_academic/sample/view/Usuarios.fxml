@@ -2,16 +2,20 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="548.0" prefWidth="823.0" stylesheets="@../style/config.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UsuariosController">
+<AnchorPane prefHeight="610.0" prefWidth="823.0" stylesheets="@../style/config.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UsuariosController">
    <children>
       <VBox layoutX="-6.0" prefHeight="548.0" prefWidth="823.0" style="-fx-background-color: #E7E6E8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <padding>
@@ -59,7 +63,7 @@
                               <Font size="13.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Novo" textFill="#f4f4f4">
+                        <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Editar" textFill="#f4f4f4">
                            <HBox.margin>
                               <Insets bottom="15.0" right="15.0" top="15.0" />
                            </HBox.margin>
@@ -69,6 +73,134 @@
                         </JFXButton>
                      </children>
                   </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" prefHeight="400.0" prefWidth="783.0" style="-fx-background-color: #FAFAFA;" styleClass="withShadow">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <children>
+                  <JFXTreeTableView prefHeight="203.0" prefWidth="783.0" style="-fx-border-color: #FAFAFA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TreeTableColumn prefWidth="95.0" text="ID" />
+                        <TreeTableColumn prefWidth="326.0" text="Nome" />
+                        <TreeTableColumn minWidth="0.0" prefWidth="161.0" text="Login" />
+                        <TreeTableColumn minWidth="1.0" prefWidth="199.0" text="Cargo" />
+                     </columns>
+                  </JFXTreeTableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="400.0" prefWidth="783.0" style="-fx-background-color: #FAFAFA;" styleClass="withShadow" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <VBox.margin>
+                  <Insets bottom="1.0" top="15.0" />
+               </VBox.margin>
+               <children>
+                  <VBox layoutX="281.0" layoutY="18.0" prefHeight="235.0" prefWidth="783.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="45.0" prefWidth="783.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #0F7DBA;" text="+" textFill="#f4f4f4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="15.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <Label alignment="CENTER" prefHeight="19.0" prefWidth="152.0" text="Adicionar Novo Usuário" textFill="#29363e">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="51.0" prefWidth="783.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXComboBox focusColor="#0f7dba" prefHeight="29.0" prefWidth="245.0" promptText="Cargo">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="15.0" top="10.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="textFields" />
+                                    <String fx:value="textFieldsWithBackGround" />
+                                 </styleClass>
+                              </JFXComboBox>
+                              <JFXTextField focusColor="#0f7dba" prefHeight="29.0" prefWidth="490.0" promptText="Nome">
+                                 <styleClass>
+                                    <String fx:value="textFields" />
+                                    <String fx:value="textFieldsWithBackGround" />
+                                 </styleClass>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="51.0" prefWidth="783.0">
+                           <children>
+                              <JFXTextField focusColor="#0f7dba" prefHeight="30.0" prefWidth="200.0" promptText="Login">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="15.0" top="10.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="textFields" />
+                                    <String fx:value="textFieldsWithBackGround" />
+                                 </styleClass>
+                              </JFXTextField>
+                              <JFXPasswordField focusColor="#0f7dba" prefHeight="30.0" prefWidth="260.0" promptText="Senha">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="15.0" top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="textFields" />
+                                    <String fx:value="textFieldsWithBackGround" />
+                                 </styleClass>
+                              </JFXPasswordField>
+                              <JFXPasswordField focusColor="#0f7dba" prefHeight="30.0" prefWidth="260.0" promptText="Confirmar Senha">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="textFields" />
+                                    <String fx:value="textFieldsWithBackGround" />
+                                 </styleClass>
+                              </JFXPasswordField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="500.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E33737;" text="Cancelar" textFill="#f4f4f4">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Salvar" textFill="#f4f4f4">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
          </children>
