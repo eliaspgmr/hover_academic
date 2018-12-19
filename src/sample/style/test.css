@@ -80,3 +80,7 @@
 .jfx-tab-pane .headers-region .tab:selected .tab-container .tab-label {
     -fx-text-fill: WHITE;
 }
+
+.withShadow {
+    -fx-effect: dropshadow( gaussian, rgba(0, 255, 255, 0.4), 10, 0.5, 0.0, 0.0 );
+}

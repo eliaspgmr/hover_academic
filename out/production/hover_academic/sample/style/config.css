@@ -1,11 +1,26 @@
 .textFields {
-    -fx-text-fill: #E7E6E8;
-    -fx-prompt-text-fill: #9A999A;
+    
+    -fx-text-fill: #29363E;
+    -fx-prompt-text-fill: #94989A;
+    -fx-font-size: 13px;
 
 }
-.mainTopo {
-    -fx-border-color: #DEE4E7;
-    -fx-border-width: 0px 0px 1px 0px;
+.textFieldsWithBackGround {
+    -fx-border-radius: 3 3 0 0;
+    -fx-background-color: #E7E6E8;
+    -fx-background-radius: 3 3 0 0;
+    -jfx-unfocus-color: #94989A;
+}
+
+.textFieldsWithBackGround > .input-line {
+    
+    -fx-pref-height: 1px;
+    -fx-translate-y: 0px;
+    
+}
+
+.withShadow {
+    -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, 0.10), 15, 0.2, 1.4, 1.3 );
 }
 
 .jfx-tab-pane .tab-header-background {
@@ -22,3 +37,10 @@
     -fx-font-size: 15;
     -fx-padding: 7 10 7 10;
 }
+
+#findButton {
+    -fx-text: "";
+    -fx-graphic: url("../img/icons/search_min.png");
+}
+
+

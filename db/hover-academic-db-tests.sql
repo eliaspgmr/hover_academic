@@ -9,7 +9,7 @@ drop table usuarios;
 insert into usuarios
 (us_nome, us_login, us_senha, us_cargo)
 values
-('Administrador','root','D+JTNjUUtkyjN40BHSeFrw==','administrador');
+('Elias Ferreira','elias','D+JTNjUUtkyjN40BHSeFrw==','professor');
 
 select * from usuarios;
 select * from usuarios where us_login='root';
@@ -41,6 +41,16 @@ values
 ('2', null,'Rebeca Ferreira da Silva','2008/05/08','20084584528','15816544303','f',null,'1');
 
 select * from alunos;
+
+select * from alunos join usuarios on usuarios_id_usuario = id_usuario and al_nome like 'marcelo';
+select * from alunos left outer join responsavel on responsavel_id_responsavel = id_responsavel;
+
+select * from alunos
+join usuarios 
+on usuarios_id_usuario = id_usuario
+left outer join responsavel
+on responsavel_id_responsavel = id_responsavel
+where al_nome like 'r%';
 
 delete from alunos where id_aluno = 1;
 

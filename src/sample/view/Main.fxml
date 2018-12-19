@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
@@ -13,9 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="592.0" prefWidth="922.0" stylesheets="@../style/config.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="656.0" prefWidth="1133.0" stylesheets="@../style/config.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
    <left>
-      <AnchorPane prefHeight="510.0" prefWidth="215.0" style="-fx-background-color: #29363E;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="510.0" prefWidth="215.0" style="-fx-background-color: #29363E;" styleClass="withShadow" BorderPane.alignment="CENTER">
          <children>
             <VBox prefHeight="459.0" prefWidth="215.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
@@ -157,13 +158,13 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane fx:id="contentField" style="-fx-background-color: #E4E5E5;" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="contentField" prefHeight="514.0" prefWidth="746.0" style="-fx-background-color: #E4E5E5;" styleClass="withShadow" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin></AnchorPane>
    </center>
    <top>
-      <AnchorPane prefHeight="50.0" prefWidth="803.0" styleClass="mainTopo" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="50.0" prefWidth="803.0" style="-fx-background-color: #F4F4F4;" BorderPane.alignment="CENTER">
          <children>
             <HBox prefHeight="50.0" prefWidth="201.0">
                <children>
@@ -204,6 +205,10 @@
                </font>
             </Label>
          </children>
+         <styleClass>
+            <String fx:value="mainTopo" />
+            <String fx:value="withShadow" />
+         </styleClass>
       </AnchorPane>
    </top>
 </BorderPane>

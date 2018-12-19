@@ -1,16 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UsuariosController">
+<AnchorPane prefHeight="548.0" prefWidth="823.0" stylesheets="@../style/config.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UsuariosController">
    <children>
-      <Label layoutX="165.0" layoutY="183.0" text="Usuários - Em construção!">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
+      <VBox layoutX="-6.0" prefHeight="548.0" prefWidth="823.0" style="-fx-background-color: #E7E6E8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <AnchorPane prefHeight="61.0" prefWidth="783.0" style="-fx-background-color: #FAFAFA;" styleClass="withShadow">
+               <children>
+                  <HBox fx:id="userFindBar" alignment="CENTER_LEFT" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="570.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="213.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXComboBox focusColor="#0f7dba" prefHeight="30.0" prefWidth="179.0" promptText="Procurar Por">
+                           <HBox.margin>
+                              <Insets bottom="15.0" left="15.0" top="15.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="textFieldsWithBackGround" />
+                              <String fx:value="textFields" />
+                           </styleClass>
+                        </JFXComboBox>
+                        <JFXTextField focusColor="#0f7dba" prefHeight="30.0" prefWidth="312.0" promptText="Pesquisar">
+                           <HBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="2.0" top="15.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="textFieldsWithBackGround" />
+                              <String fx:value="textFields" />
+                           </styleClass>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton id="findButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="35.0" text=" ">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" layoutX="514.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="193.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E33737;" text="Deletar" textFill="#f4f4f4">
+                           <HBox.margin>
+                              <Insets bottom="15.0" right="15.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Novo" textFill="#f4f4f4">
+                           <HBox.margin>
+                              <Insets bottom="15.0" right="15.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

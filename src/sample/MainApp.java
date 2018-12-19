@@ -21,7 +21,6 @@ import java.io.IOException;
 public class MainApp {
     //Main Stage
     private static Stage mainStage = new Stage();
-
     JFXOptionPane optionPane = new JFXOptionPane(mainStage);
 
     public MainApp() throws IOException {

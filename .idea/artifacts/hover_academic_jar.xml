@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="hover_academic:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/hover_academic_jar</output-path>
+    <root id="archive" name="hover_academic.jar">
+      <element id="module-output" name="hover_academic" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/JFXOptionPane.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jfoenix-8.0.7.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
