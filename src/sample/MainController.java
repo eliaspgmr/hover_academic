@@ -30,6 +30,12 @@ public class MainController implements Initializable {
     @FXML Button btnUsuarios = new Button();
     @FXML Button btnConfig = new Button();
 
+    private Parent userRoot;
+    private Parent configRoot;
+    private Parent alunoRoot;
+    private Parent relatorioRoot;
+    private Parent financeiroRoot;
+
     JFXOptionPane optionPane = new JFXOptionPane(MainApp.getStage());
 
     @FXML
@@ -56,14 +62,14 @@ public class MainController implements Initializable {
 
     @FXML
     public void loadAlunos(ActionEvent event) {
+
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("view/Alunos.fxml"));
             contentField.getChildren().clear();
-            contentField.getChildren().add(root);
+            contentField.getChildren().add(alunoRoot);
             txtTitulo.setText("Alunos");
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             optionPane.showErrorDialog(e.getMessage());
         }
 
@@ -75,12 +81,11 @@ public class MainController implements Initializable {
     public void loadFinanceiro(ActionEvent event) {
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("view/Financeiro.fxml"));
             contentField.getChildren().clear();
-            contentField.getChildren().add(root);
+            contentField.getChildren().add(financeiroRoot);
             txtTitulo.setText("Financeiro");
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             optionPane.showErrorDialog(e.getMessage());
         }
 
@@ -90,12 +95,11 @@ public class MainController implements Initializable {
     public void loadRelatorios (ActionEvent event) {
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("view/Relatorios.fxml"));
             contentField.getChildren().clear();
-            contentField.getChildren().add(root);
+            contentField.getChildren().add(relatorioRoot);
             txtTitulo.setText("Relatórios");
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             optionPane.showErrorDialog(e.getMessage());
         }
 
@@ -105,12 +109,11 @@ public class MainController implements Initializable {
     public void loadUsuarios (ActionEvent event) {
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("view/Usuarios.fxml"));
             contentField.getChildren().clear();
-            contentField.getChildren().add(root);
+            contentField.getChildren().add(userRoot);
             txtTitulo.setText("Usuários");
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             optionPane.showErrorDialog(e.getMessage());
         }
 
@@ -118,14 +121,14 @@ public class MainController implements Initializable {
 
     @FXML
     public void loadConfig (ActionEvent event) {
+
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("view/Configuracoes.fxml"));
             contentField.getChildren().clear();
-            contentField.getChildren().add(root);
+            contentField.getChildren().add(configRoot);
             txtTitulo.setText("Configurações");
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             optionPane.showErrorDialog(e.getMessage());
         }
 
@@ -134,6 +137,19 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        try {
+
+            alunoRoot = FXMLLoader.load(getClass().getResource("view/Alunos.fxml"));
+            financeiroRoot = FXMLLoader.load(getClass().getResource("view/Financeiro.fxml"));
+            relatorioRoot = FXMLLoader.load(getClass().getResource("view/Relatorios.fxml"));
+            userRoot = FXMLLoader.load(getClass().getResource("view/Usuarios.fxml"));
+            configRoot = FXMLLoader.load(getClass().getResource("view/Configuracoes.fxml"));
+
+        } catch (IOException e) {
+            optionPane.showErrorDialog("Os FXML files não podem ser carregados!");
+        }
+
         txtNome.setText(Session.getUserName());
         this.loadAlunos(new ActionEvent());
         txtTitulo.setText("Alunos");

@@ -91,8 +91,8 @@ public class LoginController implements Initializable {
 
                     Session.start(user);
 
-                    txtLogin.setText(null);
-                    txtPassword.setText(null);
+                    txtLogin.clear();
+                    txtPassword.clear();
 
                     new MainApp();
 

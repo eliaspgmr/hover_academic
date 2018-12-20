@@ -1,4 +1,7 @@
 package sample.model.bean;
+
+import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
+
 /**
  * hover-academic
  * Class Usuario

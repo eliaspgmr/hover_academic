@@ -47,4 +47,8 @@
     -fx-graphic: url("../img/icons/search_min.png");
 }
 
+.fundoTransparent {
+    -fx-background-color: transparent;
+}
+
 

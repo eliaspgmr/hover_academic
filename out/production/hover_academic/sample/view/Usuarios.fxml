@@ -4,12 +4,12 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -75,37 +75,43 @@
                   </HBox>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" prefHeight="400.0" prefWidth="783.0" style="-fx-background-color: #FAFAFA;" styleClass="withShadow">
+            <AnchorPane maxHeight="-Infinity" prefHeight="900.0" prefWidth="783.0" style="-fx-background-color: #FAFAFA;" styleClass="withShadow">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
                <children>
-                  <JFXTreeTableView prefHeight="203.0" prefWidth="783.0" style="-fx-border-color: #FAFAFA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <columns>
-                        <TreeTableColumn prefWidth="95.0" text="ID" />
-                        <TreeTableColumn prefWidth="326.0" text="Nome" />
-                        <TreeTableColumn minWidth="0.0" prefWidth="161.0" text="Login" />
-                        <TreeTableColumn minWidth="1.0" prefWidth="199.0" text="Cargo" />
-                     </columns>
-                  </JFXTreeTableView>
+                  <TableView fx:id="userTable" prefHeight="256.0" prefWidth="783.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="userTableID" maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="ID" />
+                      <TableColumn fx:id="userTableNome" maxWidth="400.0" minWidth="250.0" prefWidth="0.0" text="Nome" />
+                        <TableColumn fx:id="userTableLogin" maxWidth="350.0" minWidth="200.0" prefWidth="0.0" text="Login" />
+                        <TableColumn fx:id="userTableCargo" maxWidth="300.0" minWidth="200.0" prefWidth="0.0" text="Cargo" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="400.0" prefWidth="783.0" style="-fx-background-color: #FAFAFA;" styleClass="withShadow" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="167.0" prefWidth="783.0" style="-fx-background-color: #FAFAFA;" styleClass="withShadow" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <VBox.margin>
                   <Insets bottom="1.0" top="15.0" />
                </VBox.margin>
                <children>
                   <VBox layoutX="281.0" layoutY="18.0" prefHeight="235.0" prefWidth="783.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <HBox prefHeight="45.0" prefWidth="783.0">
+                        <HBox fx:id="hBoxAddUser" prefHeight="45.0" prefWidth="783.0">
                            <children>
-                              <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #0F7DBA;" text="+" textFill="#f4f4f4">
+                              <JFXButton fx:id="addUserButton" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#addNewUser" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #0F7DBA;" text="+" textFill="#f4f4f4">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                                  <HBox.margin>
                                     <Insets left="15.0" top="15.0" />
                                  </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </JFXButton>
                               <Label alignment="CENTER" prefHeight="19.0" prefWidth="152.0" text="Adicionar Novo Usuário" textFill="#29363e">
                                  <font>
@@ -117,12 +123,12 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="51.0" prefWidth="783.0">
+                        <HBox fx:id="hBoxFormOne" prefHeight="51.0" prefWidth="783.0">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
                            <children>
-                              <JFXComboBox focusColor="#0f7dba" prefHeight="29.0" prefWidth="245.0" promptText="Cargo">
+                              <JFXComboBox fx:id="userTxtCargo" focusColor="#0f7dba" prefHeight="29.0" prefWidth="245.0" promptText="Cargo">
                                  <HBox.margin>
                                     <Insets bottom="10.0" left="15.0" top="10.0" />
                                  </HBox.margin>
@@ -131,7 +137,7 @@
                                     <String fx:value="textFieldsWithBackGround" />
                                  </styleClass>
                               </JFXComboBox>
-                              <JFXTextField focusColor="#0f7dba" prefHeight="29.0" prefWidth="490.0" promptText="Nome">
+                              <JFXTextField fx:id="userTxtNome" focusColor="#0f7dba" prefHeight="29.0" prefWidth="490.0" promptText="Nome">
                                  <styleClass>
                                     <String fx:value="textFields" />
                                     <String fx:value="textFieldsWithBackGround" />
@@ -142,9 +148,9 @@
                               </JFXTextField>
                            </children>
                         </HBox>
-                        <HBox prefHeight="51.0" prefWidth="783.0">
+                        <HBox fx:id="hBoxFormTwo" prefHeight="51.0" prefWidth="783.0">
                            <children>
-                              <JFXTextField focusColor="#0f7dba" prefHeight="30.0" prefWidth="200.0" promptText="Login">
+                              <JFXTextField fx:id="userTxtLogin" focusColor="#0f7dba" prefHeight="30.0" prefWidth="200.0" promptText="Login">
                                  <HBox.margin>
                                     <Insets bottom="10.0" left="15.0" top="10.0" />
                                  </HBox.margin>
@@ -153,7 +159,7 @@
                                     <String fx:value="textFieldsWithBackGround" />
                                  </styleClass>
                               </JFXTextField>
-                              <JFXPasswordField focusColor="#0f7dba" prefHeight="30.0" prefWidth="260.0" promptText="Senha">
+                              <JFXPasswordField fx:id="userTxtSenha" focusColor="#0f7dba" prefHeight="30.0" prefWidth="260.0" promptText="Senha">
                                  <HBox.margin>
                                     <Insets bottom="10.0" left="15.0" top="10.0" />
                                  </HBox.margin>
@@ -165,7 +171,7 @@
                                     <String fx:value="textFieldsWithBackGround" />
                                  </styleClass>
                               </JFXPasswordField>
-                              <JFXPasswordField focusColor="#0f7dba" prefHeight="30.0" prefWidth="260.0" promptText="Confirmar Senha">
+                              <JFXPasswordField fx:id="userTxtConfSenha" focusColor="#0f7dba" prefHeight="30.0" prefWidth="260.0" promptText="Confirmar Senha">
                                  <HBox.margin>
                                     <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
                                  </HBox.margin>
@@ -179,9 +185,9 @@
                               </JFXPasswordField>
                            </children>
                         </HBox>
-                        <HBox alignment="BOTTOM_RIGHT" prefHeight="500.0" prefWidth="200.0">
+                        <HBox fx:id="hBoxFormButtons" alignment="BOTTOM_RIGHT" prefHeight="500.0" prefWidth="200.0">
                            <children>
-                              <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E33737;" text="Cancelar" textFill="#f4f4f4">
+                              <JFXButton fx:id="userBtnCancelar" buttonType="RAISED" onAction="#cancelarAddAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E33737;" text="Cancelar" textFill="#f4f4f4">
                                  <HBox.margin>
                                     <Insets bottom="20.0" right="20.0" top="20.0" />
                                  </HBox.margin>
@@ -189,7 +195,7 @@
                                     <Font size="13.0" />
                                  </font>
                               </JFXButton>
-                              <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Salvar" textFill="#f4f4f4">
+                              <JFXButton fx:id="userBtnSalvar" buttonType="RAISED" onAction="#salvarAddAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Salvar" textFill="#f4f4f4">
                                  <HBox.margin>
                                     <Insets bottom="20.0" right="20.0" top="20.0" />
                                  </HBox.margin>
