@@ -21,6 +21,7 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
 
     @FXML Label txtNome = new Label();
+    @FXML Label txtCargo = new Label();
     @FXML Label txtTitulo = new Label();
     @FXML ImageView btnClose = new ImageView();
     @FXML AnchorPane contentField = new AnchorPane();
@@ -151,6 +152,7 @@ public class MainController implements Initializable {
         }
 
         txtNome.setText(Session.getUserName());
+        txtCargo.setText("("+Session.getUserCargo()+")");
         this.loadAlunos(new ActionEvent());
         txtTitulo.setText("Alunos");
     }

@@ -127,6 +127,7 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         txtLogin.setText("root");
         txtPassword.setText("1234");
 

@@ -180,14 +180,23 @@
             </HBox>
             <HBox alignment="TOP_RIGHT" layoutX="544.0" prefHeight="50.0" prefWidth="265.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <Label fx:id="txtNome" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="175.0" text="Elias Ferreira" textFill="#4d4c4a">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets bottom="15.0" top="15.0" />
-                     </HBox.margin>
-                  </Label>
+                  <VBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="189.0">
+                     <children>
+                        <Label fx:id="txtNome" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="181.0" text="Usuário" textFill="#4d4c4a">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="txtCargo" alignment="CENTER_RIGHT" prefHeight="13.0" prefWidth="185.0" text="(Cargo)" textFill="#4d4c4a">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
                   <ImageView fitHeight="40.0" fitWidth="40.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
                         <Insets bottom="5.0" left="15.0" right="30.0" top="5.0" />

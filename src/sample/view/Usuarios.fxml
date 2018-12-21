@@ -55,7 +55,7 @@
                   </HBox>
                   <HBox alignment="TOP_RIGHT" layoutX="514.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="193.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E33737;" text="Deletar" textFill="#f4f4f4">
+                        <JFXButton fx:id="userDeleteButton" onAction="#deleteUserAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E33737;" text="Deletar" textFill="#f4f4f4">
                            <HBox.margin>
                               <Insets bottom="15.0" right="15.0" top="15.0" />
                            </HBox.margin>
@@ -63,7 +63,7 @@
                               <Font size="13.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Editar" textFill="#f4f4f4">
+                        <JFXButton prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Editar" textFill="#f4f4f4">
                            <HBox.margin>
                               <Insets bottom="15.0" right="15.0" top="15.0" />
                            </HBox.margin>
@@ -102,7 +102,7 @@
                      <children>
                         <HBox fx:id="hBoxAddUser" prefHeight="45.0" prefWidth="783.0">
                            <children>
-                              <JFXButton fx:id="addUserButton" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#addNewUser" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #0F7DBA;" text="+" textFill="#f4f4f4">
+                              <JFXButton fx:id="addUserButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#addNewUser" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #0F7DBA;" text="+" textFill="#f4f4f4">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -187,7 +187,7 @@
                         </HBox>
                         <HBox fx:id="hBoxFormButtons" alignment="BOTTOM_RIGHT" prefHeight="500.0" prefWidth="200.0">
                            <children>
-                              <JFXButton fx:id="userBtnCancelar" buttonType="RAISED" onAction="#cancelarAddAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E33737;" text="Cancelar" textFill="#f4f4f4">
+                              <JFXButton fx:id="userBtnCancelar" onAction="#cancelarAddAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E33737;" text="Cancelar" textFill="#f4f4f4">
                                  <HBox.margin>
                                     <Insets bottom="20.0" right="20.0" top="20.0" />
                                  </HBox.margin>
@@ -195,7 +195,7 @@
                                     <Font size="13.0" />
                                  </font>
                               </JFXButton>
-                              <JFXButton fx:id="userBtnSalvar" buttonType="RAISED" onAction="#salvarAddAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Salvar" textFill="#f4f4f4">
+                              <JFXButton fx:id="userBtnSalvar" onAction="#salvarAddAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Salvar" textFill="#f4f4f4">
                                  <HBox.margin>
                                     <Insets bottom="20.0" right="20.0" top="20.0" />
                                  </HBox.margin>
