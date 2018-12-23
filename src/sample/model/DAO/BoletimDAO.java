@@ -16,10 +16,12 @@ public class BoletimDAO {
     //Create a new boletim on the system
     public void create(Boletim boletim) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement(
                     "INSERT INTO boletim (" +
@@ -42,6 +44,8 @@ public class BoletimDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -51,10 +55,12 @@ public class BoletimDAO {
     //Delete a specific boletim
     public void delete(Boletim boletim) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM boletim WHERE id_boletim = ?");
             statement.setInt(1, boletim.getId());
@@ -66,6 +72,8 @@ public class BoletimDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -75,12 +83,14 @@ public class BoletimDAO {
     //Select a boletim by id
     public Boletim selectById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Boletim boletim = new Boletim();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM boletim WHERE id_boletim = ?");
             statement.setInt(1, id);
@@ -99,6 +109,8 @@ public class BoletimDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }

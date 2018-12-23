@@ -25,20 +25,16 @@ public class ConnectionHover {
     private static String password;
     
     //Connection
-    public static Connection getConnection() {
-        try {
+    public static Connection getConnection() throws SQLException, ClassNotFoundException {
 
-            user = ServerSession.getUser();
-            password = ServerSession.getPassword();
-            url = "jdbc:mysql://"+ServerSession.getServer()+":"+ServerSession.getPort()+"/hover_academic?useTimezone=true&serverTimezone=UTC";
-            //url = "jdbc:mysql://localhost:3306/hover_academic?useTimezone=true&serverTimezone=UTC";
-            Class.forName(DRIVER);
-            
-            return DriverManager.getConnection(url, user, password);
-            
-        } catch (ClassNotFoundException | SQLException ex) {
-            throw new RuntimeException("Erro na conexão",ex);
-        }
+        user = ServerSession.getUser();
+        password = ServerSession.getPassword();
+        url = "jdbc:mysql://"+ServerSession.getServer()+":"+ServerSession.getPort()+"/hover_academic?useTimezone=true&serverTimezone=UTC";
+        //url = "jdbc:mysql://localhost:3306/hover_academic?useTimezone=true&serverTimezone=UTC";
+        Class.forName(DRIVER);
+
+        return DriverManager.getConnection(url, user, password);
+
     }
     
     //Close Connection 1

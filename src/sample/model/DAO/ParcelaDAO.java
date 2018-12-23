@@ -18,10 +18,12 @@ public class ParcelaDAO {
     //Create a new parcela on the system
     public void create(Parcela parcela) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement(
                     "INSERT INTO parcelas (" +
@@ -45,6 +47,8 @@ public class ParcelaDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -54,10 +58,12 @@ public class ParcelaDAO {
     //Delete a specific parcela
     public void delete(Parcela parcela) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM parcelas WHERE financeiro_id_financeiro = ? AND numero = ?");
             statement.setInt(1, parcela.getIdFinanceiro());
@@ -70,6 +76,8 @@ public class ParcelaDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -79,10 +87,12 @@ public class ParcelaDAO {
     //Delete all parcelas
     public void deleteAll(Parcela parcela) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM parcelas WHERE financeiro_id_financeiro = ?");
             statement.setInt(1, parcela.getIdFinanceiro());
@@ -94,6 +104,8 @@ public class ParcelaDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -103,12 +115,14 @@ public class ParcelaDAO {
     //Select a parcela
     public Parcela select(int id_financeiro, int numero) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Parcela parcela = new Parcela();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM parcelas WHERE financeiro_id_financeiro = ? AND numero = ?");
             statement.setInt(1, id_financeiro);
@@ -128,6 +142,8 @@ public class ParcelaDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -138,12 +154,14 @@ public class ParcelaDAO {
     //Select all parcelas
     public List<Parcela> selectAll(int id_financeiro) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         List<Parcela> parcelas = new ArrayList<>();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM parcelas WHERE financeiro_id_financeiro = ?");
             statement.setInt(1, id_financeiro);
@@ -163,6 +181,8 @@ public class ParcelaDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }

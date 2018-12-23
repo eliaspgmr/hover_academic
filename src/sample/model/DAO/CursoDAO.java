@@ -16,10 +16,12 @@ public class CursoDAO {
     //Create a new curso on the system
     public void create(Curso curso) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement(
                     "INSERT INTO cursos (" +
@@ -40,6 +42,8 @@ public class CursoDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -49,10 +53,12 @@ public class CursoDAO {
     //Delete a specific curso
     public void delete(Curso curso) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM cursos WHERE id_curso = ?");
             statement.setInt(1, curso.getId());
@@ -64,6 +70,8 @@ public class CursoDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -73,12 +81,14 @@ public class CursoDAO {
     //Select a curso by id
     public Curso selectById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Curso curso = new Curso();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM cursos WHERE id_curso = ?");
             statement.setInt(1, id);
@@ -96,6 +106,8 @@ public class CursoDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }

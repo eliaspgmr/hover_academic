@@ -16,10 +16,12 @@ public class TurmaDAO {
     //Create a new turma on the system
     public void create(Turma turma) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement(
                     "INSERT INTO turma (" +
@@ -44,6 +46,8 @@ public class TurmaDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -53,10 +57,12 @@ public class TurmaDAO {
     //Delete a specific turma
     public void delete(Turma turma) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM turma WHERE id_turma = ?");
             statement.setInt(1, turma.getId());
@@ -68,6 +74,8 @@ public class TurmaDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -77,12 +85,14 @@ public class TurmaDAO {
     //Select a turma by id
     public Turma selectById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Turma turma = new Turma();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM turma WHERE id_turma = ?");
             statement.setInt(1, id);
@@ -102,6 +112,8 @@ public class TurmaDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }

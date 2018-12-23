@@ -9,9 +9,9 @@ drop table usuarios;
 insert into usuarios
 (us_nome, us_login, us_senha, us_cargo)
 values
-('Elias Ferreira','elias','D+JTNjUUtkyjN40BHSeFrw==','professor');
+('Elias Ferreira','elias','D+JTNjUUtkyjN40BHSeFrw==','Professor');
 
-select * from usuarios;
+select * from usuarios order by us_nome;
 select * from usuarios where us_login='root';
 delete from usuarios where us_login='root';
 -- ---------------------------------------

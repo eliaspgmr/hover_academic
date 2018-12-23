@@ -14,12 +14,14 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 
 public class ConfigController implements Initializable{
-    
+
+    //nodes
     @FXML JFXTextField txtUser = new JFXTextField();
     @FXML JFXPasswordField txtPass = new JFXPasswordField();
     @FXML JFXTextField txtServer = new JFXTextField();
     @FXML JFXTextField txtPort = new JFXTextField();
 
+    //Global Variables
     JFXOptionPane optionPane = new JFXOptionPane(LoginApp.getLoginStage());
     
     @FXML
@@ -37,8 +39,10 @@ public class ConfigController implements Initializable{
         dados.setPort(txtPort.getText());
 
         RWConfig.createFile();
-        if(RWConfig.getCreateValue()) { 
-            
+
+
+        if(RWConfig.getCreateValue()) {
+
             RWConfig.write(dados);
             if(RWConfig.getWriteValue()) {
                 ServerSession.update();
@@ -47,9 +51,9 @@ public class ConfigController implements Initializable{
             }else {
                 optionPane.showErrorDialog("Problema ao salvar dados");
             }
-            
+
         }else {
-            optionPane.showErrorDialog("The file config couldn't been created!");
+            optionPane.showErrorDialog("Problema ao criar arquivo config.ini!");
         }
         
     }
@@ -57,11 +61,23 @@ public class ConfigController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         RWConfig.createFile();
-        Config config = RWConfig.read();
-        txtUser.setText(config.getUser());
-        txtPass.setText(config.getPassword());
-        txtServer.setText(config.getServer());
-        txtPort.setText(config.getPort());
+        if(RWConfig.getCreateValue()) {
+            Config config = RWConfig.read();
+            if(RWConfig.getReadValue()) {
+
+                txtUser.setText(config.getUser());
+                txtPass.setText(config.getPassword());
+                txtServer.setText(config.getServer());
+                txtPort.setText(config.getPort());
+
+            } else {
+                optionPane.showErrorDialog("Problema ao ler dados");
+            }
+
+        } else {
+            optionPane.showErrorDialog("Problema ao criar arquivo config.ini!");
+        }
+
     }
 
 }

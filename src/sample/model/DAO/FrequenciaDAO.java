@@ -16,10 +16,12 @@ public class FrequenciaDAO {
     //Create a new frequencia on the system
     public void create(Frequencia frequencia) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement(
                     "INSERT INTO frequencia (" +
@@ -36,6 +38,8 @@ public class FrequenciaDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -45,10 +49,12 @@ public class FrequenciaDAO {
     //Delete a specific Frequencia
     public void delete(Frequencia frequencia) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM frequencia WHERE id_frequencia = ?");
             statement.setInt(1, frequencia.getId());
@@ -60,6 +66,8 @@ public class FrequenciaDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -69,12 +77,14 @@ public class FrequenciaDAO {
     //Select a frequencia by id
     public Frequencia selectById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Frequencia frequencia = new Frequencia();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM frequencia WHERE id_frequencia = ?");
             statement.setInt(1, id);
@@ -90,6 +100,8 @@ public class FrequenciaDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }

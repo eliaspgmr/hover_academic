@@ -16,10 +16,12 @@ public class CancelamentoDAO {
     //Create a new cancelamento on the system
     public void create(Cancelamento cancelamento) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement(
                     "INSERT INTO cancelamento (" +
@@ -37,6 +39,8 @@ public class CancelamentoDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -46,10 +50,12 @@ public class CancelamentoDAO {
     //Delete a specific cancelamento
     public void delete(Cancelamento cancelamento) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM cancelamento WHERE financeiro_id_financeiro = ?");
             statement.setInt(1, cancelamento.getIdFinanceiro());
@@ -61,6 +67,8 @@ public class CancelamentoDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -70,12 +78,14 @@ public class CancelamentoDAO {
     //Select a endereco by id
     public Cancelamento electById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Cancelamento cancelamento = new Cancelamento();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM cancelamento WHERE financeiro_id_financeiro = ?");
             statement.setInt(1, id);
@@ -91,6 +101,8 @@ public class CancelamentoDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }

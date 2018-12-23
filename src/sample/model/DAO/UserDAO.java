@@ -9,8 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
 import sample.connection.ConnectionHover;
+import sample.interfaces.UserDAOInterface;
 import sample.model.bean.Usuario;
 import sample.criptography.Criptography;
 import java.util.ArrayList;
@@ -19,15 +19,21 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class UserDAO {
+public class UserDAO implements UserDAOInterface {
+
+    private String message;
+
 
     //Create a new User on system
-    public void create(Usuario user) {
+    @Override
+    public boolean create(Usuario user) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("INSERT INTO usuarios (us_nome, us_login, us_senha, us_cargo) VALUES (?,?,?,?)");
             statement.setString(1, user.getNome());
@@ -37,10 +43,47 @@ public class UserDAO {
 
             statement.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Salvo com sucesso");
+            this.message = "Salvo com sucesso";
+            return true;
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+            this.message = ex.getMessage();
+            return false;
+        } catch (ClassNotFoundException e) {
+            this.message = e.getMessage();
+            return false;
+        } finally {
+            ConnectionHover.closeConnection(connection, statement);
+        }
+
+    }
+
+    //Delete a specific user
+    @Override
+    public boolean delete(Usuario user) {
+
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        try {
+
+            connection = ConnectionHover.getConnection();
+
+            statement = connection.prepareStatement("DELETE FROM usuarios WHERE id_usuario = ?");
+            statement.setInt(1, user.getId());
+
+
+            statement.executeUpdate();
+
+            this.message = "Excluído com sucesso!";
+            return true;
+
+        } catch (SQLException ex) {
+            this.message = "Problema ao excluir!\n " +ex.getMessage();
+            return false;
+        } catch (ClassNotFoundException e) {
+            this.message = "Problema ao excluir!\n " +e.getMessage();
+            return false;
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -48,16 +91,19 @@ public class UserDAO {
     }
 
     //List all the users of the system
+    @Override
     public List<Usuario> listUsers() {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         List<Usuario> usuarios = new ArrayList<>();
 
         try {
 
-            statement = connection.prepareStatement("SELECT * FROM usuarios");
+            connection = ConnectionHover.getConnection();
+
+            statement = connection.prepareStatement("SELECT * FROM usuarios ORDER BY us_nome");
             result = statement.executeQuery();
 
             while(result.next()) {
@@ -75,6 +121,8 @@ public class UserDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -82,39 +130,18 @@ public class UserDAO {
         return usuarios;
     }
 
-    //Delete a specific user
-    public void delete(Usuario user) {
-
-        Connection connection = ConnectionHover.getConnection();
-        PreparedStatement statement = null;
-
-        try {
-
-            statement = connection.prepareStatement("DELETE FROM usuarios WHERE id_usuario = ?");
-            statement.setInt(1, user.getId());
-
-
-            statement.executeUpdate();
-
-            JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
-
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Problema ao excluir!\n " +ex.getMessage());
-        } finally {
-            ConnectionHover.closeConnection(connection, statement);
-        }
-
-    }
-
     //Select user by login
+    @Override
     public Usuario select(String login) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Usuario user = new Usuario();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM usuarios WHERE us_login = ?");
             statement.setString(1, login);
@@ -132,6 +159,8 @@ public class UserDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -139,14 +168,62 @@ public class UserDAO {
         return user;
     }
 
+    //Select user by login
+    @Override
+    public List<Usuario> find(String field, String login) {
+
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        List<Usuario> usuarios = new ArrayList<>();
+
+        try {
+
+            connection = ConnectionHover.getConnection();
+
+            statement = connection.prepareStatement("SELECT * FROM usuarios WHERE "+field+" like ? ORDER BY us_nome");
+
+            //statement.setString(1, field);
+            statement.setString(1, login+"%");
+            result = statement.executeQuery();
+
+            while(result.next()) {
+
+                Usuario usuario = new Usuario();
+
+                usuario.setId(result.getInt("id_usuario"));
+                usuario.setNome(result.getString("us_nome"));
+                usuario.setLogin(result.getString("us_login"));
+                usuario.setSenha(result.getString("us_senha"));
+                usuario.setCargo(result.getString("us_cargo"));
+
+                usuarios.add(usuario);
+
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            ConnectionHover.closeConnection(connection, statement, result);
+        }
+
+        return usuarios;
+    }
+
+    //select a user by his ID
+    @Override
     public Usuario selectById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Usuario user = new Usuario();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM usuarios WHERE id_user = ?");
             statement.setInt(1, id);
@@ -164,6 +241,8 @@ public class UserDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -171,5 +250,8 @@ public class UserDAO {
         return user;
     }
 
+    public String getMessage() {
+        return message;
+    }
 
 }

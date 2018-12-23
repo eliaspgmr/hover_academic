@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import jfxOptionPane.application.JFXOptionPane;
 import sample.model.bean.Session;
 import sample.ConfigApp;
 import sample.MainApp;
@@ -40,17 +41,22 @@ public class LoginController implements Initializable {
     @FXML Label textUserMessage = new Label();
     @FXML Label textPassMessage = new Label();
 
-    //JFXOptionPane optionPane = new JFXOptionPane(LoginApp.getLoginStage());
+    JFXOptionPane optionPane = new JFXOptionPane(LoginApp.getLoginStage());
 
 
     double x = 0;
     double y = 0;
     
     @FXML 
-    public void btnConfigAction () throws IOException {
+    public void btnConfigAction () {
 
-        //Tratar erros
-        new ConfigApp(LoginApp.getLoginStage());
+        try {
+
+            new ConfigApp(LoginApp.getLoginStage());
+
+        } catch (IOException e) {
+            optionPane.showErrorDialog("Problema ao abrir configurações\n" +e.getMessage());
+        }
 
     }
     
@@ -78,7 +84,6 @@ public class LoginController implements Initializable {
 
             if(user.getLogin() == null) {
 
-                // System.out.println("Usuário Inválido!");
                 textUserMessage.setText(txtLogin.getText()+" não é  um usuário cadastrado!");
                 textPassMessage.setText(null);
 

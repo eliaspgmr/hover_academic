@@ -18,10 +18,12 @@ public class AlunoDAO {
     //create a new aluno
     public void create(Aluno aluno) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement(
                     "INSERT INTO alunos (" +
@@ -52,6 +54,8 @@ public class AlunoDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -61,12 +65,14 @@ public class AlunoDAO {
     //List all the alunos of the system
     public List<Aluno> listAlunos() {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         List<Aluno> alunos = new ArrayList<>();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM alunos");
             result = statement.executeQuery();
@@ -91,6 +97,8 @@ public class AlunoDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -101,12 +109,14 @@ public class AlunoDAO {
     //List all the alunos of the system
     public List<Aluno> select(String nome) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         List<Aluno> alunos = new ArrayList<>();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM alunos WHERE nome = ?");
             statement.setString(1, nome);
@@ -132,6 +142,8 @@ public class AlunoDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -142,12 +154,14 @@ public class AlunoDAO {
     //Select aluno by id
     public Aluno selectById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Aluno aluno = new Aluno();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM alunos WHERE id_aluno = ?");
             statement.setInt(1, id);
@@ -172,6 +186,8 @@ public class AlunoDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -182,10 +198,12 @@ public class AlunoDAO {
     //Delete a specific aluno
     public void delete(Aluno aluno) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM alunos WHERE id_aluno = ?");
             statement.setInt(1, aluno.getId());
@@ -196,6 +214,8 @@ public class AlunoDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }

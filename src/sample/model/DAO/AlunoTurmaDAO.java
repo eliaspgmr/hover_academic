@@ -16,10 +16,12 @@ public class AlunoTurmaDAO {
     //Create a new alunoTurma on the system
     public void create(AlunoTurma alunoTurma) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement(
                     "INSERT INTO alunos_turma (" +
@@ -36,6 +38,8 @@ public class AlunoTurmaDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -45,10 +49,12 @@ public class AlunoTurmaDAO {
     //Delete a specific alunoTurma
     public void delete(AlunoTurma alunoTurma) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM alunos_turma WHERE id_aluno_turma = ?");
             statement.setInt(1, alunoTurma.getId());
@@ -60,6 +66,8 @@ public class AlunoTurmaDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -69,12 +77,14 @@ public class AlunoTurmaDAO {
     //Select a alunoTurma by id
     public AlunoTurma selectById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         AlunoTurma alunoTurma = new AlunoTurma();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM alunos_turma WHERE id_aluno_turma = ?");
             statement.setInt(1, id);
@@ -90,6 +100,8 @@ public class AlunoTurmaDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }

@@ -4,6 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -42,13 +44,16 @@ public class UsuariosController implements Initializable {
     @FXML JFXButton userDeleteButton = new JFXButton();
 
     @FXML JFXComboBox<String> userTxtCargo = new JFXComboBox<>();
+    @FXML JFXComboBox<String> userFindByTxt = new JFXComboBox<>();
     @FXML JFXTextField userTxtNome = new JFXTextField();
     @FXML JFXTextField userTxtLogin = new JFXTextField();
+    @FXML JFXTextField userFindTxt = new JFXTextField();
     @FXML JFXPasswordField userTxtSenha = new JFXPasswordField();
     @FXML JFXPasswordField userTxtConfSenha = new JFXPasswordField();
 
     ObservableList<Usuario> usuarios = FXCollections.observableArrayList();
     ObservableList<String> cargos = FXCollections.observableArrayList();
+    ObservableList<String> findByList = FXCollections.observableArrayList();
 
     JFXOptionPane optionPane = new JFXOptionPane(MainApp.getStage());
 
@@ -63,7 +68,7 @@ public class UsuariosController implements Initializable {
             hBoxAddUser.setDisable(true);
 
         } else {
-            optionPane.showMessageDialog("Somente administradores podem adicionar novos usuário!");
+            optionPane.showMessageDialog("Você não tem permissão para adicionar novos usuário!");
         }
 
     }
@@ -90,10 +95,15 @@ public class UsuariosController implements Initializable {
             user.setSenha(userTxtSenha.getText());
             user.setCargo(userTxtCargo.getSelectionModel().getSelectedItem());
 
-            userDAO.create(user);
+            if(userDAO.create(user)){
+                this.clearAddUserForm();
+                this.update();
+                optionPane.showMessageDialog(userDAO.getMessage());
+            } else {
+                optionPane.showErrorDialog(userDAO.getMessage());
+            }
 
-            this.clearAddUserForm();
-            this.update();
+
 
         } else {
             optionPane.showMessageDialog("As senhas não são iguais!");
@@ -110,27 +120,70 @@ public class UsuariosController implements Initializable {
 
                 UserDAO userDAO = new UserDAO();
                 Usuario usuario = userTable.getSelectionModel().getSelectedItem();
-                if(optionPane.showConfirmDialog("Tem certeza que quer excluir "+usuario.getNome()+" do sistema?")) {
 
-                    userDAO.delete(usuario);
-                    this.update();
+                if(usuario.getLogin().equals("root")) {
+
+                    optionPane.showMessageDialog("O usuário Root não pode ser excluido do sistema");
+
+                } else if(usuario.getCargo().equals("Administrador") && !Session.getUserLogin().equals("root")) {
+
+                    optionPane.showMessageDialog("Somente o usuário Root pode excluir Administradores");
+
+                } else {
+
+                    if(optionPane.showConfirmDialog("Tem certeza que quer excluir "+usuario.getNome()+" do sistema?")) {
+
+                        if(userDAO.delete(usuario)){
+                            this.update();
+                            optionPane.showMessageDialog("Usuário deletado com sucesso!");
+                        } else {
+                            optionPane.showErrorDialog(userDAO.getMessage());
+                        }
+
+
+                    }
 
                 }
 
             } else {
                 optionPane.showMessageDialog("Selecione um usuário primeiro!");
             }
+
         } else {
-            optionPane.showMessageDialog("Somente administradores podem excluir usuários!");
+            optionPane.showMessageDialog("Você não tem permissão para excluir usuários!");
         }
 
     }
+
 
     public void update() {
 
         userTable.getItems().clear();
         UserDAO userDAO = new UserDAO();
         usuarios.addAll(userDAO.listUsers());
+        userTable.setItems(usuarios);
+
+    }
+
+    public void find(String login) {
+
+        userTable.getItems().clear();
+        UserDAO userDAO = new UserDAO();
+
+        switch (userFindByTxt.getSelectionModel().getSelectedItem()) {
+
+            case "Login":
+                usuarios.addAll(userDAO.find("us_login", login));
+                break;
+            case "Nome":
+                usuarios.addAll(userDAO.find("us_nome", login));
+                break;
+            case "Cargo":
+                usuarios.addAll(userDAO.find("us_cargo", login));
+                break;
+
+        }
+
         userTable.setItems(usuarios);
 
     }
@@ -160,6 +213,11 @@ public class UsuariosController implements Initializable {
         userTableLogin.setCellValueFactory(new PropertyValueFactory<>("login"));
         userTableCargo.setCellValueFactory(new PropertyValueFactory<>("cargo"));
 
+        userTxtNome.clear();
+        userTxtLogin.clear();
+        userTxtSenha.clear();
+        userTxtConfSenha.clear();
+
         this.update();
 
         cargos.addAll(
@@ -168,11 +226,25 @@ public class UsuariosController implements Initializable {
             "Gerente",
             "Auxiliar Administrativo"
         );
-
         userTxtCargo.setItems(cargos);
 
+        findByList.addAll(
+            "Nome",
+            "Login",
+            "Cargo"
+        );
+        userFindByTxt.setItems(findByList);
+        userFindByTxt.getSelectionModel().select(0);
+
+        userFindTxt.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> ov, String oldValue, String newValue) {
+                // oldValue = Texto anterior a edição
+                // newValue = Texto atual
+                find(newValue);
+            }
+        });
+
     }
-
-
 
 }

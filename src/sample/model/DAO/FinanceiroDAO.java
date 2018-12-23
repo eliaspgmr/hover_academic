@@ -15,10 +15,12 @@ public class FinanceiroDAO {
 
     public void create(Financeiro financeiro) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement(
                     "INSERT INTO financeiro (" +
@@ -46,6 +48,8 @@ public class FinanceiroDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -55,10 +59,12 @@ public class FinanceiroDAO {
     //Delete a specific financeiro
     public void delete(Financeiro financeiro) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM financeiro WHERE id_financeiro = ?");
             statement.setInt(1, financeiro.getId());
@@ -70,6 +76,8 @@ public class FinanceiroDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -77,12 +85,14 @@ public class FinanceiroDAO {
     }//Select a financeiro by id
     public Financeiro selectById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Financeiro financeiro = new Financeiro();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM financeiro WHERE id_financeiro = ?");
             statement.setInt(1, id);
@@ -104,6 +114,8 @@ public class FinanceiroDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }

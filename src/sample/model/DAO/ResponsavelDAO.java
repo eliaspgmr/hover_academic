@@ -23,10 +23,13 @@ public class ResponsavelDAO {
     //create a new Responsavel
     public void create(Responsavel responsavel) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
+
             statement = connection.prepareStatement("INSERT INTO responsavel (nome, data_nascimento, rg, cpf) values (?,?,?,?)");
             statement.setString(1, responsavel.getNome());
             statement.setString(2, responsavel.getDataNascimento());
@@ -39,6 +42,8 @@ public class ResponsavelDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao salvar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -48,12 +53,14 @@ public class ResponsavelDAO {
     //list all the responsaveis of the system
     public List<Responsavel> listResponsavel() {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         List<Responsavel> responsaveis = new ArrayList<>();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM responsavel");
             result = statement.executeQuery();
@@ -73,6 +80,8 @@ public class ResponsavelDAO {
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -83,10 +92,12 @@ public class ResponsavelDAO {
     //delete a responsavel from the system
     public void delete(Responsavel responsavel) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("DELETE FROM responsavel WHERE id_responsavel = ?");
             statement.setInt(1, responsavel.getId());
@@ -98,6 +109,8 @@ public class ResponsavelDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao excluir!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement);
         }
@@ -107,12 +120,14 @@ public class ResponsavelDAO {
     //select a responsavel by id
     public Responsavel selectById(int id) {
 
-        Connection connection = ConnectionHover.getConnection();
+        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
         Responsavel responsavel = new Responsavel();
 
         try {
+
+            connection = ConnectionHover.getConnection();
 
             statement = connection.prepareStatement("SELECT * FROM responsavel WHERE id_responsavel = ?");
             statement.setInt(1, id);
@@ -130,6 +145,8 @@ public class ResponsavelDAO {
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problema ao buscar!"+ex);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
