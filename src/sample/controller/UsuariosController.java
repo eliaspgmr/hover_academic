@@ -16,12 +16,14 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import jfxOptionPane.application.JFXOptionPane;
+import sample.EditUserApp;
 import sample.MainApp;
 import sample.model.DAO.UserDAO;
 import sample.model.bean.Session;
 import sample.model.bean.Usuario;
 import sun.applet.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -42,6 +44,7 @@ public class UsuariosController implements Initializable {
     @FXML JFXButton userBtnCancelar = new JFXButton();
     @FXML JFXButton userBtnSalvar = new JFXButton();
     @FXML JFXButton userDeleteButton = new JFXButton();
+    @FXML JFXButton userEditButton = new JFXButton();
 
     @FXML JFXComboBox<String> userTxtCargo = new JFXComboBox<>();
     @FXML JFXComboBox<String> userFindByTxt = new JFXComboBox<>();
@@ -152,6 +155,39 @@ public class UsuariosController implements Initializable {
         } else {
             optionPane.showMessageDialog("Você não tem permissão para excluir usuários!");
         }
+
+    }
+
+    @FXML //Open the edit user Screen
+    public void userEditAction(ActionEvent event){
+
+        if (Session.getUserCargo().equals("Administrador")) {
+
+            if (userTable.getSelectionModel().getSelectedItem() != null) {
+
+                if((!Session.getUserLogin().equals("root")) && userTable.getSelectionModel().getSelectedItem().getLogin().equals("root")) {
+
+                    optionPane.showMessageDialog("Somente o Root pode editar o usuário Root!");
+
+                } else {
+
+                    try {
+                        EditUserApp editUserApp = new EditUserApp(MainApp.getStage(), userTable.getSelectionModel().getSelectedItem());
+                        this.update();
+                    } catch (IOException e) {
+                        optionPane.showErrorDialog("Problema ao abrir editar tela!'n"+e.getMessage());
+                    }
+
+                }
+
+            } else {
+                optionPane.showMessageDialog("Selecione um usuário primeiro!");
+            }
+
+        } else {
+            optionPane.showMessageDialog("Você não tem permissão para alterar usuários!");
+        }
+
 
     }
 

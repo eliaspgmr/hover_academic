@@ -32,7 +32,8 @@ import sample.model.bean.Usuario;
 
 
 public class LoginController implements Initializable {
-    
+
+    //Nodes
     @FXML ImageView btnConfig = new ImageView();
     @FXML ImageView btnClose = new ImageView();
     @FXML JFXTextField txtLogin = new JFXTextField();
@@ -41,13 +42,12 @@ public class LoginController implements Initializable {
     @FXML Label textUserMessage = new Label();
     @FXML Label textPassMessage = new Label();
 
+    //Global Variables
     JFXOptionPane optionPane = new JFXOptionPane(LoginApp.getLoginStage());
-
-
-    double x = 0;
-    double y = 0;
+    private double x = 0;
+    private double y = 0;
     
-    @FXML 
+    @FXML //Open Configs
     public void btnConfigAction () {
 
         try {
@@ -55,12 +55,12 @@ public class LoginController implements Initializable {
             new ConfigApp(LoginApp.getLoginStage());
 
         } catch (IOException e) {
-            optionPane.showErrorDialog("Problema ao abrir configurações\n" +e.getMessage());
+            optionPane.showErrorDialog("Problema ao abrir configurações!\n" +e.getMessage());
         }
 
     }
     
-    @FXML
+    @FXML //Method to close this window
     public void close(){
 
        LoginApp.getLoginStage().close();
@@ -69,7 +69,7 @@ public class LoginController implements Initializable {
 
     }
     
-    @FXML
+    @FXML //Method to do login on mains system
     public void login(ActionEvent evt) throws IOException {
 
         if(txtLogin.getText().equals("")) {
@@ -81,50 +81,57 @@ public class LoginController implements Initializable {
 
             UserDAO userDAO = new UserDAO();
             Usuario user = userDAO.select(txtLogin.getText());
+            if(userDAO.isOperationValue()) {
 
-            if(user.getLogin() == null) {
+                if(user.getLogin() == null) {
 
-                textUserMessage.setText(txtLogin.getText()+" não é  um usuário cadastrado!");
-                textPassMessage.setText(null);
+                    textUserMessage.setText(txtLogin.getText()+" não é  um usuário cadastrado!");
+                    textPassMessage.setText(null);
 
-            }else {
+                } else {
 
-                textUserMessage.setText(null);
-                textPassMessage.setText(null);
+                    textUserMessage.setText(null);
+                    textPassMessage.setText(null);
 
-                if(Criptography.enc(txtPassword.getText()).equals(user.getSenha())){
+                    if(Criptography.enc(txtPassword.getText()).equals(user.getSenha())){
 
-                    Session.start(user);
+                        Session.start(user);
 
-                    txtLogin.clear();
-                    txtPassword.clear();
+                        txtLogin.clear();
+                        txtPassword.clear();
 
-                    new MainApp();
+                        new MainApp();
 
-                    LoginApp.getLoginStage().close();
+                        LoginApp.getLoginStage().close();
 
 
-                }else{
-                    //System.out.println("Senha Inválida!");
-                    textPassMessage.setText("Senha Inválida!");
+                    }else{
+                        //System.out.println("Senha Inválida!");
+                        textPassMessage.setText("Senha Inválida!");
+                    }
+
                 }
 
+            } else {
+                optionPane.showErrorDialog(userDAO.getMessage());
             }
 
         }
 
     }
 
-    @FXML
+    @FXML //Drag the window
     public void dragged(MouseEvent event) {
+
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
 
         stage.setX(event.getScreenX() - x);
         stage.setY(event.getScreenY() - y);
+
     }
 
-    @FXML
+    @FXML //Drag the window
     public void pressed(MouseEvent event) {
         x = event.getSceneX();
         y = event.getSceneY();

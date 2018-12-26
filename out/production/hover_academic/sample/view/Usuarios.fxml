@@ -63,7 +63,7 @@
                               <Font size="13.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Editar" textFill="#f4f4f4">
+                        <JFXButton fx:id="userEditButton" onAction="#userEditAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Editar" textFill="#f4f4f4">
                            <HBox.margin>
                               <Insets bottom="15.0" right="15.0" top="15.0" />
                            </HBox.margin>

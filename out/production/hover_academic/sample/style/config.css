@@ -5,11 +5,49 @@
     -fx-font-size: 13px;
 
 }
+
+.comboBoxBlack  {
+    -fx-text-base-color: #F4F4F4;
+    -fx-foreground: #F4F4F4;
+    -fx-prompt-text-fill: #F4F4F4;
+}
+
+.comboBoxBlack .list-view {
+    -fx-background-color: #33444C;
+}
+
+.comboBoxBlack .list-view .list-cell{
+    -fx-background-color: #33444C;
+    -fx-text-fill: #F4F4F4;
+}
+
+.comboBoxBlack .list-view .list-cell:hover {
+    -fx-background-color: #0F7DBA;
+}
+
+.textFieldsBlack {
+
+    -fx-text-fill: #F4F4F4;
+    -fx-prompt-text-fill: #B7BABB;
+    -fx-font-size: 13px;
+
+}
 .textFieldsWithBackGround {
+
     -fx-border-radius: 3 3 0 0;
     -fx-background-color: #E7E6E8;
     -fx-background-radius: 3 3 0 0;
-    -jfx-unfocus-color: #94989A;
+    -jfx-unfocus-color: #33444C;
+
+}
+
+.textFieldsWithBackGroundBlack {
+
+    -fx-border-radius: 3 3 0 0;
+    -fx-background-color: #33444C;
+    -fx-background-radius: 3 3 0 0;
+    -jfx-unfocus-color: #33444C;
+
 }
 
 .textFieldsWithBackGround > .input-line {
@@ -17,6 +55,13 @@
     -fx-pref-height: 1px;
     -fx-translate-y: 0px;
     
+}
+
+.textFieldsWithBackGroundBlack > .input-line {
+
+    -fx-pref-height: 1px;
+    -fx-translate-y: 0px;
+
 }
 
 .withShadow {

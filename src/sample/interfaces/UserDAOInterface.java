@@ -24,4 +24,10 @@ public interface UserDAOInterface {
     //select a user by his ID
     public abstract Usuario selectById(int id);
 
+    //method to update a user
+    public abstract boolean updateUser(Usuario usuario);
+
+    //method to update a user password
+    public  abstract boolean updatePassword(Usuario usuario);
+
 }

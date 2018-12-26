@@ -18,7 +18,7 @@ public class ConfigApp {
         configStage.setHeight(342);
         configStage.setResizable(false);
         configStage.initOwner(stageOwner);
-        configStage.initModality(Modality.APPLICATION_MODAL);
+        configStage.initModality(Modality.NONE);
 
         configStage.setScene(new Scene(configRoot));
         configStage.show();

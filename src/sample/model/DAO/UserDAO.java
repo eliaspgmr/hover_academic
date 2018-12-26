@@ -21,11 +21,11 @@ import java.util.logging.Logger;
 
 public class UserDAO implements UserDAOInterface {
 
+    //Global Variables
     private String message;
+    private boolean operationValue;
 
-
-    //Create a new User on system
-    @Override
+    @Override //Create a new User on the system
     public boolean create(Usuario user) {
 
         Connection connection = null;
@@ -47,10 +47,10 @@ public class UserDAO implements UserDAOInterface {
             return true;
 
         } catch (SQLException ex) {
-            this.message = ex.getMessage();
+            this.message = "Problema ao salvar!\n"+ex.getMessage();
             return false;
         } catch (ClassNotFoundException e) {
-            this.message = e.getMessage();
+            this.message = "Problema no driver de conexão\n"+e.getMessage();
             return false;
         } finally {
             ConnectionHover.closeConnection(connection, statement);
@@ -82,7 +82,7 @@ public class UserDAO implements UserDAOInterface {
             this.message = "Problema ao excluir!\n " +ex.getMessage();
             return false;
         } catch (ClassNotFoundException e) {
-            this.message = "Problema ao excluir!\n " +e.getMessage();
+            this.message = "Problema no driver de conexão!\n " +e.getMessage();
             return false;
         } finally {
             ConnectionHover.closeConnection(connection, statement);
@@ -119,10 +119,14 @@ public class UserDAO implements UserDAOInterface {
 
             }
 
+            this.operationValue = true;
+
         } catch (SQLException ex) {
-            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+            this.operationValue = false;
+            this.message = "Problema ao acessar usuários!\n " +ex.getMessage();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            this.operationValue = false;
+            this.message = "Problema no driver de conexão!\n " +e.getMessage();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -157,10 +161,14 @@ public class UserDAO implements UserDAOInterface {
 
             }
 
+            this.operationValue = true;
+
         } catch (SQLException ex) {
-            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+            this.operationValue = false;
+            this.message = "Problema ao acessar usuários!\n " +ex.getMessage();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            this.operationValue = false;
+            this.message = "Problema no driver de conexão!\n " +e.getMessage();
         } finally {
             ConnectionHover.closeConnection(connection, statement, result);
         }
@@ -250,8 +258,77 @@ public class UserDAO implements UserDAOInterface {
         return user;
     }
 
+    @Override
+    public boolean updateUser(Usuario usuario) {
+
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        try {
+
+            connection = ConnectionHover.getConnection();
+
+            statement = connection.prepareStatement("UPDATE usuarios SET us_nome = ?, us_login = ?, us_cargo = ? WHERE id_usuario = ?");
+            statement.setString(1, usuario.getNome());
+            statement.setString(2, usuario.getLogin());
+            statement.setString(3, usuario.getCargo());
+            statement.setInt(4, usuario.getId());
+
+            statement.executeUpdate();
+
+            this.message = "Salvo com sucesso";
+            return true;
+
+        } catch (SQLException ex) {
+            this.message = "Problema ao salvar!\n"+ex.getMessage();
+            return false;
+        } catch (ClassNotFoundException e) {
+            this.message = "Problema no driver de conexão\n"+e.getMessage();
+            return false;
+        } finally {
+            ConnectionHover.closeConnection(connection, statement);
+        }
+
+    }
+
+    @Override
+    public boolean updatePassword(Usuario usuario) {
+
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        try {
+
+            connection = ConnectionHover.getConnection();
+
+            statement = connection.prepareStatement("UPDATE usuarios SET us_senha = ? WHERE id_usuario = ?");
+            statement.setString(1, Criptography.enc(usuario.getSenha()));
+            statement.setInt(2, usuario.getId());
+
+            statement.executeUpdate();
+
+            this.message = "Salvo com sucesso";
+            return true;
+
+        } catch (SQLException ex) {
+            this.message = "Problema ao salvar!\n"+ex.getMessage();
+            return false;
+        } catch (ClassNotFoundException e) {
+            this.message = "Problema no driver de conexão\n"+e.getMessage();
+            return false;
+        } finally {
+            ConnectionHover.closeConnection(connection, statement);
+        }
+
+    }
+
+
     public String getMessage() {
         return message;
+    }
+
+    public boolean isOperationValue() {
+        return operationValue;
     }
 
 }

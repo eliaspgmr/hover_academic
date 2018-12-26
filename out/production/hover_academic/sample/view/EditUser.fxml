@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="367.0" prefWidth="582.0" style="-fx-background-color: #33444C;" stylesheets="@../style/config.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.EditUserController">
+   <children>
+      <HBox layoutX="258.0" layoutY="150.0" prefHeight="327.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="editUserBox" prefHeight="367.0" prefWidth="320.0" style="-fx-background-color: #29363E;">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="71.0" prefWidth="321.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons/usuario.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" top="15.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="17.0" prefWidth="110.0" text="Editar Usuário" textFill="#f4f4f4">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" top="25.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="17.0" prefWidth="114.0" text="Nome" textFill="#f4f4f4">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="editUserName" focusColor="#0f7dba" prefHeight="30.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="textFieldsBlack" />
+                        <String fx:value="textFieldsWithBackGroundBlack" />
+                     </styleClass>
+                  </JFXTextField>
+                  <Label prefHeight="17.0" prefWidth="94.0" text="Login" textFill="#f4f4f4">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="editUserLogin" focusColor="#0f7dba" prefHeight="30.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="textFieldsBlack" />
+                        <String fx:value="textFieldsWithBackGroundBlack" />
+                     </styleClass>
+                  </JFXTextField>
+                  <Label prefHeight="17.0" prefWidth="99.0" text="Cargo" textFill="#f4f4f4">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXComboBox fx:id="editUserCargo" focusColor="#0f7dba" labelFloat="true" prefHeight="30.0" prefWidth="356.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="comboBoxBlack" />
+                        <String fx:value="textFieldsBlack" />
+                        <String fx:value="textFieldsWithBackGroundBlack" />
+                     </styleClass>
+                  </JFXComboBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="400.0" prefWidth="320.0" style="-fx-background-color: #29363E;">
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin>
+               <children>
+                  <JFXCheckBox fx:id="editUserSenhaSelect" checkedColor="#0f7dba" text="Editar Senha" textFill="#f4f4f4" unCheckedColor="#f4f4f4">
+                     <VBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <VBox fx:id="editUserSenhaBox" prefHeight="233.0" prefWidth="321.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="152.0" text="Nova Senha" textFill="#f4f4f4">
+                           <VBox.margin>
+                              <Insets left="20.0" top="46.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXPasswordField fx:id="editUserSenha" focusColor="#0f7dba" prefHeight="30.0">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="textFieldsBlack" />
+                              <String fx:value="textFieldsWithBackGroundBlack" />
+                           </styleClass>
+                        </JFXPasswordField>
+                        <Label prefHeight="17.0" prefWidth="155.0" text="Repetir Nova Senha" textFill="#f4f4f4">
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXPasswordField fx:id="editUserConfSenha" focusColor="#0f7dba" prefHeight="30.0">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="textFieldsBlack" />
+                              <String fx:value="textFieldsWithBackGroundBlack" />
+                           </styleClass>
+                        </JFXPasswordField>
+                     </children>
+                  </VBox>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="editUserCancelar" buttonType="RAISED" onAction="#editUserCancelarAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E33737;" text="Cancelar" textFill="#f4f4f4">
+                           <HBox.margin>
+                              <Insets bottom="20.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="editUserSalvar" buttonType="RAISED" onAction="#editUserSalvarAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0F7DBA;" text="Salvar" textFill="#f4f4f4">
+                           <HBox.margin>
+                              <Insets bottom="20.0" right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
