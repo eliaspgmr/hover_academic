@@ -112,7 +112,7 @@
                      <children>
                         <Label prefHeight="17.0" prefWidth="152.0" text="Nova Senha" textFill="#f4f4f4">
                            <VBox.margin>
-                              <Insets left="20.0" top="46.0" />
+                              <Insets left="20.0" top="47.0" />
                            </VBox.margin>
                            <font>
                               <Font size="13.0" />
